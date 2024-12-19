@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Configuration;
+using System.Data;
 using MySql.Data.MySqlClient;
 
 namespace SchoolManagementSystem.Models
@@ -32,6 +33,36 @@ namespace SchoolManagementSystem.Models
                     }
                 }
             }
+
+            public DataTable Fetch(string query)
+            {
+                DataTable dt = new DataTable();
+
+                using (MySqlConnection con = new MySqlConnection(connString))
+                {
+                    try
+                    {
+                        if (con.State == ConnectionState.Closed)
+                        {
+                            con.Open();
+                        }
+
+                        using (MySqlCommand cmd = new MySqlCommand(query, con))
+                        {
+                            using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                            {
+                                sda.Fill(dt);
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Error: {ex.Message}");
+                    }
+                }
+
+                return dt;
+            }
         }
-    }
+}
 }
