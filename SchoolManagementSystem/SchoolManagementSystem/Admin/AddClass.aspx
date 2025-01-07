@@ -26,7 +26,7 @@
                     <div class="col-md-6">
                         <asp:GridView ID="GridView1" runat="server" CssClass="table table-hover table-bordered" DataKeyNames="ClassID" AutoGenerateColumns="False"
                         EmptyDataText="No Record To Display" OnPageIndexChanging="GridView1_PageIndexChanging" OnRowCancelingEdit="GridView1_RowCancelingEdit"
-                        OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" Width="1786px" AllowPaging="true" PageSize="4">
+                        OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" OnRowDeleting="GridView1_RowDeleting" Width="1786px" AllowPaging="true" PageSize="4">
                         <Columns>
                             <asp:BoundField DataField="ClassID" HeaderText="Class ID" ReadOnly="True">
                                 <ItemStyle HorizontalAlign="Center" />

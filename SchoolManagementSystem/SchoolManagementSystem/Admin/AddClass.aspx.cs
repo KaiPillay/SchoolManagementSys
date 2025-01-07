@@ -111,6 +111,46 @@ namespace SchoolManagementSystem.Admin
                 lblStatus.ForeColor = System.Drawing.Color.Red;
             }
         }
+        protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            try
+            {
+                // Retrieve the ClassID of the row being deleted
+                int classId = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Values["ClassID"]);
+
+                // Create the connection string and query for deletion
+                string connectionString = ConfigurationManager.ConnectionStrings["SchoolSys"].ConnectionString;
+                string deleteQuery = "DELETE FROM Class WHERE ClassID = @ClassID";
+
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                {
+                    MySqlCommand cmd = new MySqlCommand(deleteQuery, connection);
+                    cmd.Parameters.AddWithValue("@ClassID", classId);
+
+                    connection.Open();
+                    int rowsAffected = cmd.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        lblStatus.Text = "Class deleted successfully.";
+                        lblStatus.ForeColor = System.Drawing.Color.Green;
+                    }
+                    else
+                    {
+                        lblStatus.Text = "Failed to delete the class.";
+                        lblStatus.ForeColor = System.Drawing.Color.Red;
+                    }
+                }
+
+                // Refresh the GridView after the delete operation
+                GetClass(); // Assuming GetClass() reloads the data
+            }
+            catch (Exception ex)
+            {
+                lblStatus.Text = "An error occurred while deleting the class: " + ex.Message;
+                lblStatus.ForeColor = System.Drawing.Color.Red;
+            }
+        }
 
         protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
