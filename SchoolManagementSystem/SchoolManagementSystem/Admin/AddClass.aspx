@@ -24,26 +24,26 @@
             </div>
                 <div class="row mb-3 mr-lg-5 ml-lg-5 mt-md-5">
                     <div class="col-md-6">
-                        <asp:GridView ID="GridView1" runat="server" CssClass="tabel tabel-hover tabel-bordered" DataKeyNames="ClassID" AutoGenerateColumns="False" 
-                            EmptyDataText="No Record To Display" OnPageIndexChanging="GridView1_PageIndexChanging" OnRowCancelingEdit="GridView1_RowCancelingEdit" 
-                            OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" Width="1786px" AllowPaging ="true" PageSize="4">
-                            <Columns>
-                                <asp:BoundField DataField="Sr.No" HeaderText="Sr.No" ReadOnly="True">
+                        <asp:GridView ID="GridView1" runat="server" CssClass="table table-hover table-bordered" DataKeyNames="ClassID" AutoGenerateColumns="False"
+                        EmptyDataText="No Record To Display" OnPageIndexChanging="GridView1_PageIndexChanging" OnRowCancelingEdit="GridView1_RowCancelingEdit"
+                        OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" Width="1786px" AllowPaging="true" PageSize="4">
+                        <Columns>
+                            <asp:BoundField DataField="ClassID" HeaderText="Class ID" ReadOnly="True">
                                 <ItemStyle HorizontalAlign="Center" />
-                                </asp:BoundField>
-                                <asp:TemplateField HeaderText="Class">
-                                    <EditItemTemplate>
-                                        <asp:TextBox ID="txtClassEdit" runat="server" Text='<%# Eval("form-control") %>'></asp:TextBox>
-                                    </EditItemTemplate>
-                                    <ItemTemplate>
-                                        <asp:Label ID="lblClassName" runat="server" Text='<%# Eval("ClassName") %>'></asp:Label>
-                                    </ItemTemplate>
-                                    <ItemStyle HorizontalAlign="Center" />
-                                </asp:TemplateField>
-                                <asp:CommandField CausesValidation="False" HeaderText="Operation" ShowEditButton="True" />
-                            </Columns>
-                            <HeaderStyle BackColor="#5558C9" ForeColor="White"/>
-                        </asp:GridView>
+                            </asp:BoundField>
+
+                            <asp:TemplateField HeaderText="Class">
+                                <EditItemTemplate>
+                                    <asp:TextBox ID="txtClassEdit" runat="server" Text='<%# Eval("ClassName") %>'></asp:TextBox>
+                                </EditItemTemplate>
+                                <ItemTemplate>
+                                    <asp:Label ID="lblClass" runat="server" Text='<%# Eval("ClassName") %>'></asp:Label>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+
+                            <asp:CommandField ShowEditButton="True" ShowDeleteButton="True" />
+                        </Columns>
+                    </asp:GridView>
                     </div>
                 </div>
         </div>

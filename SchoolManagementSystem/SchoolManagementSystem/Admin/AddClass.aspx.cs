@@ -24,13 +24,8 @@ namespace SchoolManagementSystem.Admin
         {
             try
             {
-                // MySQL query using ROW_NUMBER()
-                string query = @"
-                SELECT 
-                    ROW_NUMBER() OVER(ORDER BY ClassID) AS SrNo, 
-                    ClassID, 
-                    ClassName 
-                FROM Class";
+                // MySQL query to fetch class data, now using ClassID as the key
+                string query = "SELECT ClassID, ClassName FROM Class";
 
                 // Fetching data
                 DataTable dt = fn.Fetch(query);
@@ -46,6 +41,7 @@ namespace SchoolManagementSystem.Admin
                 lblStatus.ForeColor = System.Drawing.Color.Red; // Error message in red
             }
         }
+
 
         protected void btnAdd_Click(object sender, EventArgs e)
         {
@@ -98,6 +94,7 @@ namespace SchoolManagementSystem.Admin
             }
         }
 
+
         private void BindGridView()
         {
             try
@@ -146,7 +143,7 @@ namespace SchoolManagementSystem.Admin
                 // Find the textbox in the row and get the updated value
                 string ClassName = (row.FindControl("txtClassEdit") as TextBox).Text;
 
-                // Update query using parameterised command
+                // Update query using parameterized command
                 string updateQuery = "UPDATE Class SET ClassName = @ClassName WHERE ClassID = @ClassID";
                 string connectionString = ConfigurationManager.ConnectionStrings["SchoolSys"].ConnectionString;
 
@@ -171,5 +168,6 @@ namespace SchoolManagementSystem.Admin
                 lblStatus.ForeColor = System.Drawing.Color.Red;
             }
         }
+
     }
 }
