@@ -1,41 +1,42 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMst.master.cs" Inherits="SchoolManagementSystem.Admin.AdminMst" %>
 
 <!DOCTYPE html>
-
 <html>
 <head runat="server">
     <title>School Management System</title>
     <meta charset="UTF-8">
     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
-        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
-        <link href="../Content/styles.css" rel="stylesheet" />
-
-
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <link href="../Content/styles.css" rel="stylesheet" />
     <script src="../Scripts/jquery-3.0.0.min.js"></script>
     <script src="../Scripts/popper.min.js"></script>
     <script src="../Scripts/bootstrap.min.js"></script>
 
-        <script>
-            $(document).ready(function () {
-                $(".siderbar_menu li").click(function () {
-                    $(".siderbar_menu li").removeClass("active");
-                    $(this).addClass("active");
-                });
-
-                $(".hamburger").click(function () {
-                    $(".wrapper").addClass("active");
-                });
-
-                $(".close, .bg_shadow").click(function () {
-                    $(".wrapper").removeClass("active");
-                });
+    <script>
+        $(document).ready(function () {
+            $(".siderbar_menu li").click(function () {
+                $(".siderbar_menu li").removeClass("active");
+                $(this).addClass("active");
             });
-        </script>
+
+            $(".hamburger").click(function () {
+                $(".wrapper").addClass("active");
+            });
+
+            $(".close, .bg_shadow").click(function () {
+                $(".wrapper").removeClass("active");
+            });
+        });
+    </script>
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
+        <!-- ScriptManager placed inside the form -->
+        <asp:ScriptManager ID="ScriptManager1" runat="server" />
+
         <div class="wrapper">
             <div class="sidebar">
                 <div class="bg_shadow"></div>
@@ -101,7 +102,6 @@
                                 <li><a href="../Admin/Student.aspx" class="active"><i class="fas fa-users pr-1"></i>Add Students</a></li>
                                 <li><a href="../Admin/StudAttendanceDetails.aspx" class="active"><i class="far fa-list-alt pr-1"></i>Attendance Details</a></li>
                             </ul>
-
                         </li>
                         <li>
                             <a href="#">
@@ -129,9 +129,9 @@
                     <div class="logout_btn">
                         <asp:LinkButton ID="btnLogOut" runat="server" CausesValidation="false">Logout</asp:LinkButton>
                     </div>
-
                 </div>
             </div>
+
             <div class="main_container">
                 <div class="navbar">
                     <div class="hamburger">
@@ -144,10 +144,8 @@
 
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
-
             </div>
         </div>
-
     </form>
 </body>
 </html>
