@@ -30,20 +30,16 @@
             </div>
             <div class="row mb-3 mr-lg-5 ml-lg-5 mt-md-5">
                 <div class="col-md-6">
-                <asp:GridView ID="GridView1" runat="server" CssClass="table table-hover table-bordered" AutoGenerateColumns="False">
+                    <asp:GridView ID="GridView1" runat="server" CssClass="table table-hover table-bordered" AutoGenerateColumns="False" 
+                    OnPageIndexChanging="GridView1_PageIndexChanging" 
+                    OnRowCancelingEdit="GridView1_RowCancelingEdit" 
+                    OnRowEditing="GridView1_RowEditing" 
+                    OnRowUpdating="GridView1_RowUpdating">
                     <Columns>
                         <asp:BoundField DataField="ClassID" HeaderText="Class ID" ReadOnly="True" />
-                        <asp:BoundField DataField="ClassName" HeaderText="Class Name" ReadOnly="True" />
-                        <asp:TemplateField HeaderText="Fees (Annual)">
-                            <ItemTemplate>
-                                <asp:Label ID="Label1" runat="server" Text='<%# Eval("FeesAmount") %>'></asp:Label>
-                            </ItemTemplate>
-                        </asp:TemplateField>
-                        <asp:CommandField HeaderText="Operation" ShowDeleteButton="True" ShowEditButton="True" />
-                    </Columns>
-                </asp:GridView>
-                <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" OnRowCommand="GridView2_RowCommand">
-                    <Columns>
+                        <asp:BoundField DataField="ClassName" HeaderText="Class Name" />
+                        <asp:BoundField DataField="FeesAmount" HeaderText="Fees Amount" />
+                        <asp:CommandField ShowEditButton="True" ShowCancelButton="True" />
                     </Columns>
                 </asp:GridView>
 
