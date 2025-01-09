@@ -30,6 +30,7 @@
             </div>
             <div class="row mb-3 mr-lg-5 ml-lg-5 mt-md-5">
                 <div class="col-md-6">
+<<<<<<< HEAD
                     <asp:GridView ID="GridView1" runat="server" CssClass="table table-hover table-bordered" AutoGenerateColumns="False" 
                     OnPageIndexChanging="GridView1_PageIndexChanging" 
                     OnRowCancelingEdit="GridView1_RowCancelingEdit" 
@@ -43,6 +44,9 @@
                     </Columns>
                 </asp:GridView>
 
+=======
+                    <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+>>>>>>> parent of 1218bf6 (Fee Operations)
                 </div>
             </div>
         </div>

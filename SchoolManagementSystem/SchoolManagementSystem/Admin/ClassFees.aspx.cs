@@ -48,6 +48,7 @@ namespace SchoolManagementSystem.Admin
             }
         }
 
+<<<<<<< HEAD
         protected void GridView2_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             if (e.CommandName == "Edit")
@@ -62,6 +63,8 @@ namespace SchoolManagementSystem.Admin
             }
         }
 
+=======
+>>>>>>> parent of 1218bf6 (Fee Operations)
         protected void btnAdd_Click(object sender, EventArgs e)
         {
             try
@@ -137,26 +140,10 @@ namespace SchoolManagementSystem.Admin
         {
             try
             {
-                // Fetching data from the database
-                DataTable dt = fn.Fetch("SELECT f.FeesId, f.ClassId, c.ClassName, f.FeesAmount FROM Fees f INNER JOIN Class c ON f.ClassID = c.ClassID");
-
-                // Check if the DataTable contains any rows
-                if (dt.Rows.Count > 0)
-                {
-                    // Bind data to the GridView
-                    GridView1.DataSource = dt;
-                    GridView1.DataBind();
-                }
-                else
-                {
-                    // If no data, display a message
-                    lblStatus.Text = "No fees available to display.";
-                    lblStatus.ForeColor = System.Drawing.Color.Orange;
-
-                    // Clear the GridView (ensure it is empty)
-                    GridView1.DataSource = null;
-                    GridView1.DataBind();
-                }
+                // Fetch all fees and display them in the GridView
+                DataTable dt = fn.Fetch("SELECT f.FeeID, c.ClassName, f.FeesAmount FROM Fees f INNER JOIN Class c ON f.ClassID = c.ClassID");
+                GridView1.DataSource = dt;
+                GridView1.DataBind();
             }
             catch (Exception ex)
             {
@@ -164,6 +151,7 @@ namespace SchoolManagementSystem.Admin
                 lblStatus.ForeColor = System.Drawing.Color.Red;
             }
         }
+<<<<<<< HEAD
 
         protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
@@ -177,6 +165,8 @@ namespace SchoolManagementSystem.Admin
             GridView1.EditIndex = -1; // Cancel editing
             GetFees();  // Refresh the grid
         }
+=======
+>>>>>>> parent of 1218bf6 (Fee Operations)
     }
 }
 
