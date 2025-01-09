@@ -40,6 +40,23 @@ namespace SchoolManagementSystem.Admin
             }
         }
 
+        protected void GridView2_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            // Add your logic here to handle row commands like Edit or Delete
+            if (e.CommandName == "Edit")
+            {
+                int rowIndex = Convert.ToInt32(e.CommandArgument);
+                // Perform your logic for the Edit command here
+            }
+            else if (e.CommandName == "Delete")
+            {
+                int rowIndex = Convert.ToInt32(e.CommandArgument);
+                // Perform your logic for the Delete command here
+            }
+        }
+
+
+
         protected void btnAdd_Click(object sender, EventArgs e)
         {
             try
@@ -108,16 +125,38 @@ namespace SchoolManagementSystem.Admin
         {
             try
             {
-                // Fetch all fees and display them in the GridView
-                DataTable dt = fn.Fetch("SELECT f.FeeID, c.ClassName, f.FeesAmount FROM Fees f INNER JOIN Class c ON f.ClassID = c.ClassID");
-                GridView1.DataSource = dt;
-                GridView1.DataBind();
+                // Fetching data from the database
+                DataTable dt = fn.Fetch("SELECT f.FeesId, f.ClassId, c.ClassName, f.FeesAmount FROM Fees f INNER JOIN Class c ON f.ClassID = c.ClassID");
+
+                // Check if the DataTable contains any rows
+                if (dt.Rows.Count > 0)
+                {
+                    // Bind data to the GridView
+                    GridView1.DataSource = dt;
+                    GridView1.DataBind();
+                }
+                else
+                {
+                    // If no data, display a message
+                    lblStatus.Text = "No fees available to display.";
+                    lblStatus.ForeColor = System.Drawing.Color.Orange;
+
+                    // Clear the GridView (ensure it is empty)
+                    GridView1.DataSource = null;
+                    GridView1.DataBind();
+                }
             }
             catch (Exception ex)
             {
+                // Handle any errors that occur during the data fetch
                 lblStatus.Text = "An error occurred while loading the fees: " + ex.Message;
                 lblStatus.ForeColor = System.Drawing.Color.Red;
+
+                // Optionally log the error for further debugging (you could use a logging library or System.Diagnostics)
+                System.Diagnostics.Debug.WriteLine("Error fetching fees: " + ex.Message);
             }
         }
+
+
     }
 }
