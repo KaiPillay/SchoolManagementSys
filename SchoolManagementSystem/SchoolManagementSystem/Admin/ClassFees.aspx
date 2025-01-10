@@ -26,7 +26,7 @@
             <asp:Label ID="lblStatus" runat="server" ForeColor="Black" />
             <div class="row mb-3 mr-lg-5 ml-lg-5 mt-md-5">
                 <div class="col-md-3 col-md-offset-2 mb-3">
-                    <asp:Button ID="btnAdd" runat="server" CssClass="btn btn-primary btn-block" BackColour="#5558C9" Text="Add Class" />
+                    <asp:Button ID="btnAdd" runat="server" CssClass="btn btn-primary btn-block" BackColour="#5558C9" Text="Add Class" OnClick="btnAdd_Click" />
                 </div>
             </div>
                 <div class="row mb-3 mr-lg-5 ml-lg-5 mt-md-5">
