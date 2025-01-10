@@ -6,10 +6,6 @@ using System.Configuration;
 using System.Data;
 using MySql.Data.MySqlClient;
 
-using MySql.Data.MySqlClient;
-using System;
-using System.Configuration;
-using System.Data;
 
 namespace SchoolManagementSystem.Models
 {
@@ -18,6 +14,11 @@ namespace SchoolManagementSystem.Models
         public class Commonfnx
         {
             private readonly string connString = ConfigurationManager.ConnectionStrings["SchoolSys"].ConnectionString;
+
+            internal DataTable Fetch()
+            {
+                throw new NotImplementedException();
+            }
 
             /// <summary>
             /// Executes a non-query SQL command (e.g., INSERT, UPDATE, DELETE).
@@ -68,19 +69,19 @@ namespace SchoolManagementSystem.Models
                                 sda.Fill(dt);
                             }
                         }
-                    }
-                    catch (MySqlException ex)
-                    {
-                        Console.WriteLine($"Database error: {ex.Message}");
+
+                        Console.WriteLine($"Fetched {dt.Rows.Count} rows.");
                     }
                     catch (Exception ex)
                     {
                         Console.WriteLine($"Error: {ex.Message}");
+                        // Optionally log or display the error message
                     }
                 }
 
                 return dt;
             }
+
 
             /// <summary>
             /// Tests the connection to the database.

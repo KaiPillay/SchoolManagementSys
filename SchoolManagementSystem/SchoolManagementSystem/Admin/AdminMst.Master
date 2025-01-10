@@ -70,7 +70,7 @@
                             </a>
                             <ul class="accordion">
                                 <li><a href="../Admin/AddClass.aspx" class="active"><i class="fas fa-user-plus pr-1"></i>Add Class</a></li>
-                                <li><a href="../Admin/ClassFees.aspx" class="active"><i class="fas fa-money-bill-alt pr-1"></i>Class Fees</a></li>
+                                <li><a href="../Admin/AddFees.aspx" class="active"><i class="fas fa-money-bill-alt pr-1"></i>Class Fees</a></li>
                             </ul>
                         </li>
                         <li>
