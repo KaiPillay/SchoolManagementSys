@@ -74,6 +74,7 @@
             margin-bottom: 20px;
             padding: 10px;
             border-radius: 5px;
+            font-size: 14px;
         }
 
         .alert-warning {
@@ -98,6 +99,7 @@
             <h2 class="text-center">Osgoby School Management Login</h2>
             <hr />
 
+            <!-- Message Label for Feedback -->
             <asp:Label ID="lblMsg" runat="server" CssClass="alert" Visible="false"></asp:Label>
 
             <div class="form-group">

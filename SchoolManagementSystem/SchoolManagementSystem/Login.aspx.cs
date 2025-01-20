@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Data;
 using System.Web.UI;
+using System.Diagnostics;
 using MySql.Data.MySqlClient;
 using static SchoolManagementSystem.Models.CommonFn;
+using BCrypt.Net;
 
 namespace SchoolManagementSystem
 {
     public partial class Login : System.Web.UI.Page
     {
-        Commonfnx fn = new Commonfnx();
+        Commonfnx fn = new Commonfnx();  // Instantiate the Commonfnx class to handle DB operations
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -24,73 +26,99 @@ namespace SchoolManagementSystem
             {
                 lblMsg.Text = "Please enter both username and password.";
                 lblMsg.CssClass = "alert alert-warning";
+                lblMsg.Visible = true; // Ensure the label is visible
                 return;
             }
 
             try
             {
-                // Fetch the user data
+                // Debugging output
+                Debug.WriteLine("Checking user: " + username);
+
+                // Using parameterized query to get the user details from the database
                 string query = "SELECT Id, Username, PasswordHash, Role FROM users WHERE Username = @Username";
                 MySqlParameter[] parameters = {
-                    new MySqlParameter("@Username", username)
-                };
-                DataTable dt = fn.Fetch(query, parameters);
+            new MySqlParameter("@Username", MySqlDbType.VarChar) { Value = username }
+        };
+
+                // Using the ExecuteParameterizedQueryWithResult method from Commonfnx class
+                DataTable dt = fn.ExecuteParameterizedQueryWithResult(query, parameters);
+
+                Debug.WriteLine("Fetched user count: " + dt.Rows.Count);
 
                 if (dt.Rows.Count == 1)
                 {
-                    // Check if the password matches
                     string storedPasswordHash = dt.Rows[0]["PasswordHash"].ToString();
+
+                    // Verify the password using BCrypt
                     if (VerifyPassword(password, storedPasswordHash))
                     {
+                        Debug.WriteLine("Password verified");
+
                         string role = dt.Rows[0]["Role"].ToString();
                         Session["UserId"] = dt.Rows[0]["Id"];
                         Session["Username"] = username;
                         Session["Role"] = role;
 
                         // Redirect based on role
-                        if (role == "Admin")
-                        {
-                            Response.Redirect("~/Admin/AdminHome.aspx");
-                        }
-                        else if (role == "Teacher")
-                        {
-                            Response.Redirect("~/Teacher/TeacherHome.aspx");
-                        }
-                        else if (role == "Student")
-                        {
-                            Response.Redirect("~/Student/StudentHome.aspx");
-                        }
-                        else
-                        {
-                            lblMsg.Text = "Unknown role.";
-                            lblMsg.CssClass = "alert alert-danger";
-                        }
+                        RedirectUserBasedOnRole(role);
                     }
                     else
                     {
-                        lblMsg.Text = "Invalid username or password.";
+                        lblMsg.Text = "Incorrect password. Please try again.";
                         lblMsg.CssClass = "alert alert-danger";
+                        lblMsg.Visible = true; // Ensure the label is visible
                     }
                 }
                 else
                 {
-                    lblMsg.Text = "User not found.";
+                    lblMsg.Text = "Username not found. Please check your username.";
                     lblMsg.CssClass = "alert alert-danger";
+                    lblMsg.Visible = true; // Ensure the label is visible
                 }
+            }
+            catch (MySqlException dbEx)
+            {
+                // Specific database error handling
+                lblMsg.Text = "Database error: " + dbEx.Message;
+                lblMsg.CssClass = "alert alert-danger";
+                lblMsg.Visible = true; // Ensure the label is visible
             }
             catch (Exception ex)
             {
+                // General error handling
                 lblMsg.Text = "An error occurred: " + ex.Message;
                 lblMsg.CssClass = "alert alert-danger";
+                lblMsg.Visible = true; // Ensure the label is visible
             }
         }
 
-        // Password verification method (you can use a more secure hashing algorithm here)
+
+        // Password verification method using BCrypt
         private bool VerifyPassword(string enteredPassword, string storedPasswordHash)
         {
-            // For demonstration purposes, using a simple string comparison.
-            // Consider using a proper hashing library such as bcrypt or PBKDF2 for real applications.
-            return enteredPassword == storedPasswordHash;
+            return BCrypt.Net.BCrypt.Verify(enteredPassword, storedPasswordHash);
+        }
+
+        // Method to redirect users based on their role
+        private void RedirectUserBasedOnRole(string role)
+        {
+            switch (role)
+            {
+                case "Admin":
+                    Response.Redirect("~/Admin/AdminHome.aspx");
+                    break;
+                case "Teacher":
+                    Response.Redirect("~/Teacher/TeacherHome.aspx");
+                    break;
+                case "Student":
+                    Response.Redirect("~/Student/StudentHome.aspx");
+                    break;
+                default:
+                    lblMsg.Text = "Unknown role. Please contact support.";
+                    lblMsg.CssClass = "alert alert-danger";
+                    break;
+            }
         }
     }
 }

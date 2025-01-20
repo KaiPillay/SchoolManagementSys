@@ -13,5 +13,18 @@ namespace SchoolManagementSystem.Admin
         {
 
         }
+
+        protected void btnLogOut_Click(object sender, EventArgs e)
+        {
+            // Clear any session or authentication data (if needed)
+            Session.Clear();  // Clears session data
+            Session.Abandon();  // Optionally abandon the session
+
+            // Redirect to Login.aspx
+            Response.Redirect("~/Login.aspx");
+        }
+
+
+
     }
 }
