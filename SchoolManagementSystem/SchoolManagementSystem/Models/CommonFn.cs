@@ -48,6 +48,11 @@ namespace SchoolManagementSystem.Models
                 }
             }
 
+            internal DataTable Fetch(string query, MySqlParameter[] parameters)
+            {
+                throw new NotImplementedException();
+            }
+
             /// <summary>
             /// Fetches data from the database and returns it as a DataTable.
             /// </summary>
