@@ -136,6 +136,7 @@
     <Content Include="Admin\AdminHome.aspx" />
     <Content Include="Admin\ClassFees.aspx" />
     <Content Include="Admin\EditTeacher.aspx" />
+    <Content Include="Admin\Expense.aspx" />
     <Content Include="Admin\Register.aspx" />
     <Content Include="Admin\Student.aspx" />
     <Content Include="Admin\Subject.aspx" />
@@ -286,6 +287,13 @@
     </Compile>
     <Compile Include="Admin\EditTeacher.aspx.designer.cs">
       <DependentUpon>EditTeacher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Expense.aspx.cs">
+      <DependentUpon>Expense.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Expense.aspx.designer.cs">
+      <DependentUpon>Expense.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
