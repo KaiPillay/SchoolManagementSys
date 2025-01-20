@@ -38,8 +38,8 @@ namespace SchoolManagementSystem
                 // Using parameterized query to get the user details from the database
                 string query = "SELECT Id, Username, PasswordHash, Role FROM users WHERE Username = @Username";
                 MySqlParameter[] parameters = {
-            new MySqlParameter("@Username", MySqlDbType.VarChar) { Value = username }
-        };
+                    new MySqlParameter("@Username", MySqlDbType.VarChar) { Value = username }
+                };
 
                 // Using the ExecuteParameterizedQueryWithResult method from Commonfnx class
                 DataTable dt = fn.ExecuteParameterizedQueryWithResult(query, parameters);
@@ -60,8 +60,17 @@ namespace SchoolManagementSystem
                         Session["Username"] = username;
                         Session["Role"] = role;
 
-                        // Redirect based on role
-                        RedirectUserBasedOnRole(role);
+                        // Check if there's a ReturnUrl and redirect accordingly
+                        string returnUrl = Request.QueryString["ReturnUrl"];
+                        if (!string.IsNullOrEmpty(returnUrl))
+                        {
+                            Response.Redirect(returnUrl); // Redirect to the original requested page
+                        }
+                        else
+                        {
+                            // Default redirect based on role
+                            RedirectUserBasedOnRole(role);
+                        }
                     }
                     else
                     {
@@ -92,7 +101,6 @@ namespace SchoolManagementSystem
                 lblMsg.Visible = true; // Ensure the label is visible
             }
         }
-
 
         // Password verification method using BCrypt
         private bool VerifyPassword(string enteredPassword, string storedPasswordHash)
