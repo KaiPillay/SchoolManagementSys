@@ -114,9 +114,6 @@
                 <asp:Button ID="btnLogin" runat="server" CssClass="btn-custom" Text="Login" OnClick="btnLogin_Click" />
             </div>
 
-            <div class="text-center">
-                <p>Don't have an account? <a href="Register.aspx">Register here</a></p>
-            </div>
         </div>
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

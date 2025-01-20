@@ -111,9 +111,38 @@ namespace SchoolManagementSystem.Models
                 }
             }
 
-            /// <summary>
-            /// Prepares a parameterised query to avoid SQL injection.
-            /// </summary>
+            public DataTable ExecuteParameterizedQueryWithResult(string query, MySqlParameter[] parameters)
+            {
+                DataTable dt = new DataTable();
+
+                using (MySqlConnection conn = new MySqlConnection(connString))
+                {
+                    try
+                    {
+                        conn.Open();
+                        using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                        {
+                            cmd.Parameters.AddRange(parameters);
+                            using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
+                            {
+                                sda.Fill(dt);
+                            }
+                        }
+                    }
+                    catch (MySqlException ex)
+                    {
+                        Console.WriteLine($"Database error: {ex.Message}");
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Error: {ex.Message}");
+                    }
+                }
+
+                return dt;
+            }
+
+
             /// <param name="query">The SQL query with placeholders for parameters.</param>
             /// <param name="parameters">An array of MySqlParameter objects.</param>
             public void ExecuteParameterizedQuery(string query, MySqlParameter[] parameters)

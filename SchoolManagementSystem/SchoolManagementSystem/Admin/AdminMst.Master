@@ -127,6 +127,14 @@
                                 <li><a href="../Admin/EmpAttendanceDetails.aspx" class="active"><i class="fas fa-calendar-check pr-1"></i>Employee Details</a></li>
                             </ul>
                         </li>
+
+                        <li>
+                            <a href="../Admin/Register.aspx">
+                                <div class="icon"><i class="fas fa-book"></i></div>
+                                <div class="title">Add Users</div>
+                            </a>
+                        </li>
+
                     </ul>
                     <div class="logout_btn">
                         <asp:LinkButton ID="btnLogOut" runat="server" CausesValidation="false">Logout</asp:LinkButton>
