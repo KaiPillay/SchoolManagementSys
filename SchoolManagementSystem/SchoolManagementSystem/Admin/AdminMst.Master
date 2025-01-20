@@ -89,7 +89,7 @@
                                 <li><a href="../Admin/Teacher.aspx" class="active"><i class="fas fa-user-plus pr-1"></i>Add Teachers</a></li>
                                 <li><a href="../Admin/EditTeacher.aspx" class="active"><i class="fas fa-user-plus pr-1"></i>Edit Teachers</a></li>
                                 <li><a href="../Admin/TeacherSubject.aspx" class="active"><i class="fas fa-book-reader pr-1"></i>Teachers Subject</a></li>
-                                <li><a href="../Admin/Expense.aspx" class="active"><i class="fas fa-hand-holding-usd pr-1"></i>Add Expense</a></li>
+                                <li><a href="../Admin/Expense.aspx" class="active"><i class="fas fa-hand-holding-usd pr-1"></i>Teacher Expenses</a></li>
                             </ul>
                         </li>
                         <li>
