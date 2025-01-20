@@ -136,6 +136,7 @@
     <Content Include="Admin\AddMarks.aspx" />
     <Content Include="Admin\AdminHome.aspx" />
     <Content Include="Admin\ClassFees.aspx" />
+    <Content Include="Admin\EditMarks.aspx" />
     <Content Include="Admin\EditStudent.aspx" />
     <Content Include="Admin\EditTeacher.aspx" />
     <Content Include="Admin\Expense.aspx" />
@@ -292,6 +293,13 @@
     </Compile>
     <Compile Include="Admin\ClassFees.aspx.designer.cs">
       <DependentUpon>ClassFees.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EditMarks.aspx.cs">
+      <DependentUpon>EditMarks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EditMarks.aspx.designer.cs">
+      <DependentUpon>EditMarks.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\EditStudent.aspx.cs">
       <DependentUpon>EditStudent.aspx</DependentUpon>
