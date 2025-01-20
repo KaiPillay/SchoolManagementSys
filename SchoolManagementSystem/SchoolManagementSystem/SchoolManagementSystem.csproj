@@ -139,10 +139,12 @@
     <Content Include="Admin\EditTeacher.aspx" />
     <Content Include="Admin\Expense.aspx" />
     <Content Include="Admin\Register.aspx" />
+    <Content Include="Admin\StudAttendanceDetails.aspx" />
     <Content Include="Admin\Student.aspx" />
     <Content Include="Admin\Subject.aspx" />
     <Content Include="Admin\Teacher.aspx" />
     <Content Include="Admin\TeacherSubject.aspx" />
+    <Content Include="Admin\ViewStudentAttendance.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -310,6 +312,13 @@
     <Compile Include="Admin\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\StudAttendanceDetails.aspx.cs">
+      <DependentUpon>StudAttendanceDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\StudAttendanceDetails.aspx.designer.cs">
+      <DependentUpon>StudAttendanceDetails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Student.aspx.cs">
       <DependentUpon>Student.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -337,6 +346,13 @@
     </Compile>
     <Compile Include="Admin\TeacherSubject.aspx.designer.cs">
       <DependentUpon>TeacherSubject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ViewStudentAttendance.aspx.cs">
+      <DependentUpon>ViewStudentAttendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ViewStudentAttendance.aspx.designer.cs">
+      <DependentUpon>ViewStudentAttendance.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

@@ -101,7 +101,8 @@
                             <ul class="accordion">
                                 <li><a href="../Admin/Student.aspx" class="active"><i class="fas fa-users pr-1"></i>Add Students</a></li>
                                 <li><a href="../Admin/EditStudent.aspx" class="active"><i class="fas fa-users pr-1"></i>Edit Students</a></li>
-                                <li><a href="../Admin/StudAttendanceDetails.aspx" class="active"><i class="far fa-list-alt pr-1"></i>Attendance Details</a></li>
+                                <li><a href="../Admin/StudAttendanceDetails.aspx" class="active"><i class="far fa-list-alt pr-1"></i>Add Attendance</a></li>
+                                <li><a href="../Admin/ViewStudentAttendance.aspx" class="active"><i class="far fa-list-alt pr-1"></i>View Attendance</a></li>
                             </ul>
                         </li>
                         <li>
