@@ -147,6 +147,7 @@
     <Content Include="Admin\Subject.aspx" />
     <Content Include="Admin\Teacher.aspx" />
     <Content Include="Admin\TeacherSubject.aspx" />
+    <Content Include="Admin\UpdateUsers.aspx" />
     <Content Include="Admin\ViewStudentAttendance.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -370,6 +371,13 @@
     </Compile>
     <Compile Include="Admin\TeacherSubject.aspx.designer.cs">
       <DependentUpon>TeacherSubject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UpdateUsers.aspx.cs">
+      <DependentUpon>UpdateUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UpdateUsers.aspx.designer.cs">
+      <DependentUpon>UpdateUsers.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\ViewStudentAttendance.aspx.cs">
       <DependentUpon>ViewStudentAttendance.aspx</DependentUpon>
