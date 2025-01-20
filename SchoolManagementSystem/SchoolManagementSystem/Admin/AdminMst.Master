@@ -34,7 +34,6 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <!-- ScriptManager placed inside the form -->
         <asp:ScriptManager ID="ScriptManager1" runat="server" />
 
         <div class="wrapper">
@@ -71,6 +70,7 @@
                             <ul class="accordion">
                                 <li><a href="../Admin/AddClass.aspx" class="active"><i class="fas fa-user-plus pr-1"></i>Add/Edit Classes</a></li>
                                 <li><a href="../Admin/ClassFees.aspx" class="active"><i class="fas fa-money-bill-alt pr-1"></i>Class Fees</a></li>
+                                <li><a href="../Admin/Expense.aspx" class="active"><i class="fas fa-hand-holding-usd pr-1"></i>Class Expenses</a></li>
                             </ul>
                         </li>
                         <li>
@@ -89,7 +89,6 @@
                                 <li><a href="../Admin/Teacher.aspx" class="active"><i class="fas fa-user-plus pr-1"></i>Add Teachers</a></li>
                                 <li><a href="../Admin/EditTeacher.aspx" class="active"><i class="fas fa-user-plus pr-1"></i>Edit Teachers</a></li>
                                 <li><a href="../Admin/TeacherSubject.aspx" class="active"><i class="fas fa-book-reader pr-1"></i>Teachers Subject</a></li>
-                                <li><a href="../Admin/Expense.aspx" class="active"><i class="fas fa-hand-holding-usd pr-1"></i>Teacher Expenses</a></li>
                             </ul>
                         </li>
                         <li>
@@ -112,29 +111,22 @@
                                 <div class="arrow"><i class="fas fa-chevron-down"></i></div>
                             </a>
                             <ul class="accordion">
-                                <li><a href="../Admin/Marks.aspx" class="active"><i class="fas fa-notes-medical pr-1"></i>Add Marks</a></li>
-                                <li><a href="../Admin/MarkDetails.aspx" class="active"><i class="fas fa-clipboard-check pr-1"></i>Marks Details</a></li>
+                                <li><a href="../Admin/Marks.aspx" class="active"><i class="fas fa-notes-medical pr-1"></i>View Marks</a></li>
+                                <li><a href="../Admin/AddMarks.aspx" class="active"><i class="fas fa-notes-medical pr-1"></i>Add Marks</a></li>
+                                <li><a href="../Admin/EditMarks.aspx" class="active"><i class="fas fa-notes-medical pr-1"></i>Edit Marks</a></li>
                             </ul>
                         </li>
-                        <li>
+                         <li>
                             <a href="#">
-                                <div class="icon"><i class="fas fa-calendar-alt"></i></div>
-                                <div class="title">Attendance</div>
+                                <div class="icon"><i class="fas fa-clipboard-list"></i></div>
+                                <div class="title">Users</div>
                                 <div class="arrow"><i class="fas fa-chevron-down"></i></div>
                             </a>
                             <ul class="accordion">
-                                <li><a href="../Admin/EmployeeAttendance.aspx" class="active"><i class="fas fa-calendar-plus pr-1"></i>Employee Attendance</a></li>
-                                <li><a href="../Admin/EmpAttendanceDetails.aspx" class="active"><i class="fas fa-calendar-check pr-1"></i>Employee Details</a></li>
+                                <li><a href="../Admin/Register.aspx" class="active"><i class="fas fa-notes-medical pr-1"></i>Add Users</a></li>
+                                <li><a href="../Admin/UpdateUsers.aspx" class="active"><i class="fas fa-notes-medical pr-1"></i>Update Users</a></li>
                             </ul>
                         </li>
-
-                        <li>
-                            <a href="../Admin/Register.aspx">
-                                <div class="icon"><i class="fas fa-book"></i></div>
-                                <div class="title">Add Users</div>
-                            </a>
-                        </li>
-
                     </ul>
                     <div class="logout_btn">
                         <asp:LinkButton ID="btnLogOut" runat="server" CausesValidation="false" OnClick="btnLogOut_Click">Logout</asp:LinkButton>
@@ -151,7 +143,6 @@
                         <a href="#">Osgodby Learning Support School</a>
                     </div>
                 </div>
-
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
             </div>

@@ -133,11 +133,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\AddClass.aspx" />
+    <Content Include="Admin\AddMarks.aspx" />
     <Content Include="Admin\AdminHome.aspx" />
     <Content Include="Admin\ClassFees.aspx" />
     <Content Include="Admin\EditStudent.aspx" />
     <Content Include="Admin\EditTeacher.aspx" />
     <Content Include="Admin\Expense.aspx" />
+    <Content Include="Admin\Marks.aspx" />
     <Content Include="Admin\Register.aspx" />
     <Content Include="Admin\StudAttendanceDetails.aspx" />
     <Content Include="Admin\Student.aspx" />
@@ -263,6 +265,13 @@
     <Compile Include="Admin\AddClass.aspx.designer.cs">
       <DependentUpon>AddClass.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\AddMarks.aspx.cs">
+      <DependentUpon>AddMarks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddMarks.aspx.designer.cs">
+      <DependentUpon>AddMarks.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\AdminHome.aspx.cs">
       <DependentUpon>AdminHome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -304,6 +313,13 @@
     </Compile>
     <Compile Include="Admin\Expense.aspx.designer.cs">
       <DependentUpon>Expense.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Marks.aspx.cs">
+      <DependentUpon>Marks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Marks.aspx.designer.cs">
+      <DependentUpon>Marks.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
