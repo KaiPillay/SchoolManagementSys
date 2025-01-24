@@ -189,7 +189,6 @@ C:\Users\kaipi\Documents\%TopUp\SchoolManagementSystem\SchoolManagementSys\Schoo
 C:\Users\kaipi\Documents\%TopUp\SchoolManagementSystem\SchoolManagementSys\SchoolManagementSystem\SchoolManagementSystem\bin\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\kaipi\Documents\%TopUp\SchoolManagementSystem\SchoolManagementSys\SchoolManagementSystem\SchoolManagementSystem\bin\System.Threading.Tasks.Extensions.xml
 C:\Users\kaipi\Documents\%TopUp\SchoolManagementSystem\SchoolManagementSys\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\kaipi\Documents\%TopUp\SchoolManagementSystem\SchoolManagementSys\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.csproj.AssemblyReference.cache
 C:\Users\kaipi\Documents\%TopUp\SchoolManagementSystem\SchoolManagementSys\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.csproj.CoreCompileInputs.cache
 C:\Users\kaipi\Documents\%TopUp\SchoolManagementSystem\SchoolManagementSys\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.csproj.CopyComplete
 C:\Users\kaipi\Documents\%TopUp\SchoolManagementSystem\SchoolManagementSys\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.dll
