@@ -148,9 +148,11 @@
     <Content Include="Admin\Subject.aspx" />
     <Content Include="Admin\Teacher.aspx" />
     <Content Include="Admin\TeacherSubject.aspx" />
+    <Content Include="Teacher\AddSudentGrades.aspx" />
     <Content Include="Teacher\EditSudentGrades.aspx" />
     <Content Include="Teacher\StudentGrades.aspx" />
     <Content Include="Teacher\Students.aspx" />
+    <Content Include="Teacher\StudsentAttendance.aspx" />
     <Content Include="Teacher\TeacherHome.aspx" />
     <Content Include="Admin\UpdateUsers.aspx" />
     <Content Include="Admin\ViewStudentAttendance.aspx" />
@@ -262,6 +264,7 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Teacher\ViewStudentAttendance.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -377,6 +380,13 @@
     <Compile Include="Admin\TeacherSubject.aspx.designer.cs">
       <DependentUpon>TeacherSubject.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Teacher\AddSudentGrades.aspx.cs">
+      <DependentUpon>AddSudentGrades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\AddSudentGrades.aspx.designer.cs">
+      <DependentUpon>AddSudentGrades.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Teacher\EditSudentGrades.aspx.cs">
       <DependentUpon>EditSudentGrades.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -397,6 +407,13 @@
     </Compile>
     <Compile Include="Teacher\Students.aspx.designer.cs">
       <DependentUpon>Students.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\StudsentAttendance.aspx.cs">
+      <DependentUpon>StudsentAttendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\StudsentAttendance.aspx.designer.cs">
+      <DependentUpon>StudsentAttendance.aspx</DependentUpon>
     </Compile>
     <Compile Include="Teacher\TeacherHome.aspx.cs">
       <DependentUpon>TeacherHome.aspx</DependentUpon>
@@ -434,6 +451,13 @@
     </Compile>
     <Compile Include="Teacher\TeacherMst.Master.designer.cs">
       <DependentUpon>TeacherMst.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\ViewStudentAttendance.aspx.cs">
+      <DependentUpon>ViewStudentAttendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\ViewStudentAttendance.aspx.designer.cs">
+      <DependentUpon>ViewStudentAttendance.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
