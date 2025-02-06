@@ -89,7 +89,8 @@
                             </a>
                             <ul class="accordion">
                                 <li><a href="../Teacher/ViewClass.aspx" class="active"><i class="fas fa-user-plus pr-1"></i>View Classes</a></li>
-                                <li><a href="../Teacher/Expense.aspx" class="active"><i class="fas fa-hand-holding-usd pr-1"></i>Class Expenses</a></li>
+                                <li><a href="../Teacher/Expenses.aspx" class="active"><i class="fas fa-hand-holding-usd pr-1"></i>Class Expenses</a></li>
+                                <li><a href="../Teacher/AddClassAttendance.aspx" class="active"><i class="fas fa-users pr-1"></i>Add Class Attendance</a></li>
                             </ul>
                         </li>
                         <li>
