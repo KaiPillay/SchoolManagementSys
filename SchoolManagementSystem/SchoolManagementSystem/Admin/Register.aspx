@@ -46,18 +46,23 @@
                 <h2 class="text-center text-purple">Register</h2>
                 <hr />
                 <asp:Label ID="lblMsg" runat="server" CssClass="alert" Visible="false"></asp:Label>
+
                 <div class="form-group">
                     <label for="txtUsername">Username</label>
-                    <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control" placeholder="Enter your username" required></asp:TextBox>
+                    <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control" placeholder="Enter username" required></asp:TextBox>
                 </div>
+
                 <div class="form-group">
                     <label for="txtPassword">Password</label>
-                    <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" TextMode="Password" placeholder="Enter your password" required></asp:TextBox>
+                    <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" TextMode="Password" placeholder="Enter password" required></asp:TextBox>
                 </div>
+
                 <div class="form-group">
                     <label for="txtConfirmPassword">Confirm Password</label>
-                    <asp:TextBox ID="txtConfirmPassword" runat="server" CssClass="form-control" TextMode="Password" placeholder="Confirm your password" required></asp:TextBox>
+                    <asp:TextBox ID="txtConfirmPassword" runat="server" CssClass="form-control" TextMode="Password" placeholder="Confirm password" required></asp:TextBox>
                 </div>
+
+
                 <div class="form-group">
                     <label for="ddlRole">Role</label>
                     <asp:DropDownList ID="ddlRole" runat="server" CssClass="form-control">
@@ -67,18 +72,46 @@
                         <asp:ListItem Text="Student" Value="Student" />
                     </asp:DropDownList>
                 </div>
+
+                <div id="studentInfo" style="display:none;">
+                    <div class="form-group">
+                        <label for="txtStudentName">Student Name</label>
+                        <asp:TextBox ID="txtStudentName" runat="server" CssClass="form-control" placeholder="Enter student name"></asp:TextBox>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtStudentDOB">Date of Birth</label>
+                        <asp:TextBox ID="txtStudentDOB" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
+                    </div>
+                    <div class="form-group">
+                        <label for="ddlStudentGender">Gender</label>
+                        <asp:DropDownList ID="ddlStudentGender" runat="server" CssClass="form-control">
+                            <asp:ListItem Text="Select Gender" Value="" />
+                            <asp:ListItem Text="Male" Value="Male" />
+                            <asp:ListItem Text="Female" Value="Female" />
+                        </asp:DropDownList>
+                    </div>
+                    <div class="form-group">
+                        <label for="ddlStudentClassID">Class</label>
+                        <asp:DropDownList ID="ddlStudentClassID" runat="server" CssClass="form-control"></asp:DropDownList>
+                    </div>
+                </div>
+
+
                 <div class="form-group text-center">
                     <asp:Button ID="btnRegister" runat="server" CssClass="btn btn-purple btn-block" Text="Register" OnClick="btnRegister_Click" />
                 </div>
+
                 <div class="form-group text-center">
-                    <asp:Button ID="btnBack" runat="server" CssClass="btn btn-back btn-block" Text="Back to Admin Home" OnClick="btnBack_Click" CausesValidation="false" />
+                    <asp:Button ID="btnBack" runat="server" CssClass="btn btn-back btn-block" Text="Back" OnClick="btnBack_Click" CausesValidation="false" />
                 </div>
             </div>
         </div>
 
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>
+            document.getElementById('ddlRole').addEventListener('change', function () {
+                document.getElementById('studentInfo').style.display = (this.value === 'Student') ? 'block' : 'none';
+            });
+        </script>
     </form>
 </body>
 </html>

@@ -9,14 +9,13 @@ namespace SchoolManagementSystem.Teacher
 {
     public partial class TeacherHome : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack) // Ensure it only runs on initial load
             {
                 LoadTeacherData();
             }
         }
-
         private void LoadTeacherData()
         {
             try
@@ -26,7 +25,6 @@ namespace SchoolManagementSystem.Teacher
                 DataTable attendanceData = Fetch(attendanceQuery);
                 GridViewAttendance.DataSource = attendanceData;
                 GridViewAttendance.DataBind();
-
                 lblStatus.Text = "Teacher page data loaded successfully.";
                 lblStatus.ForeColor = System.Drawing.Color.Green; // Success message in green
             }

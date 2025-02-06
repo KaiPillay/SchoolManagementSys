@@ -148,6 +148,7 @@
     <Content Include="Admin\Subject.aspx" />
     <Content Include="Admin\Teacher.aspx" />
     <Content Include="Admin\TeacherSubject.aspx" />
+    <Content Include="Student\StudentHome.aspx" />
     <Content Include="Teacher\AddClassAttendance.aspx" />
     <Content Include="Teacher\AddClassMarks.aspx" />
     <Content Include="Teacher\AddSudentGrades.aspx" />
@@ -386,6 +387,20 @@
     <Compile Include="Admin\TeacherSubject.aspx.designer.cs">
       <DependentUpon>TeacherSubject.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Student\StudentHome.aspx.cs">
+      <DependentUpon>StudentHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\StudentHome.aspx.designer.cs">
+      <DependentUpon>StudentHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\StudentMst.Master.cs">
+      <DependentUpon>StudentMst.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\StudentMst.Master.designer.cs">
+      <DependentUpon>StudentMst.Master</DependentUpon>
+    </Compile>
     <Compile Include="Teacher\AddClassAttendance.aspx.cs">
       <DependentUpon>AddClassAttendance.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -523,6 +538,7 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Teacher\TeacherMst.Master" />
+    <Content Include="Student\StudentMst.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
