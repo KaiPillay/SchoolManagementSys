@@ -149,6 +149,7 @@
     <Content Include="Admin\Teacher.aspx" />
     <Content Include="Admin\TeacherSubject.aspx" />
     <Content Include="Teacher\AddClassAttendance.aspx" />
+    <Content Include="Teacher\AddClassMarks.aspx" />
     <Content Include="Teacher\AddSudentGrades.aspx" />
     <Content Include="Teacher\EditSudentGrades.aspx" />
     <Content Include="Teacher\Expenses.aspx" />
@@ -391,6 +392,13 @@
     </Compile>
     <Compile Include="Teacher\AddClassAttendance.aspx.designer.cs">
       <DependentUpon>AddClassAttendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\AddClassMarks.aspx.cs">
+      <DependentUpon>AddClassMarks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\AddClassMarks.aspx.designer.cs">
+      <DependentUpon>AddClassMarks.aspx</DependentUpon>
     </Compile>
     <Compile Include="Teacher\AddSudentGrades.aspx.cs">
       <DependentUpon>AddSudentGrades.aspx</DependentUpon>
