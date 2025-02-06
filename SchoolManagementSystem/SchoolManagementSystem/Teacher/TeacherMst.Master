@@ -78,7 +78,7 @@
                                 <div class="arrow"><i class="fas fa-chevron-down"></i></div>
                             </a>
                             <ul class="accordion">
-                                <li><a href="../Teacher/Subjects.aspx" class="active"><i class="fas fa-book-reader pr-1"></i>View Subjects</a></li>
+                                <li><a href="../Teacher/Subject.aspx" class="active"><i class="fas fa-book-reader pr-1"></i>View Subjects</a></li>
                             </ul>
                         </li>
                         <li>
