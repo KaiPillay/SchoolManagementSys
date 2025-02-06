@@ -193,3 +193,4 @@ C:\Users\kaipi\Documents\%TopUp\SchoolManagementSystem\SchoolManagementSys\Schoo
 C:\Users\kaipi\Documents\%TopUp\SchoolManagementSystem\SchoolManagementSys\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.csproj.CopyComplete
 C:\Users\kaipi\Documents\%TopUp\SchoolManagementSystem\SchoolManagementSys\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.dll
 C:\Users\kaipi\Documents\%TopUp\SchoolManagementSystem\SchoolManagementSys\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.pdb
+C:\Users\kaipi\Documents\%TopUp\SchoolManagementSystem\SchoolManagementSys\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.csproj.AssemblyReference.cache

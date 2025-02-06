@@ -148,6 +148,7 @@
     <Content Include="Admin\Subject.aspx" />
     <Content Include="Admin\Teacher.aspx" />
     <Content Include="Admin\TeacherSubject.aspx" />
+    <Content Include="Teacher\EditSudentGrades.aspx" />
     <Content Include="Teacher\StudentGrades.aspx" />
     <Content Include="Teacher\Students.aspx" />
     <Content Include="Teacher\TeacherHome.aspx" />
@@ -375,6 +376,13 @@
     </Compile>
     <Compile Include="Admin\TeacherSubject.aspx.designer.cs">
       <DependentUpon>TeacherSubject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\EditSudentGrades.aspx.cs">
+      <DependentUpon>EditSudentGrades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\EditSudentGrades.aspx.designer.cs">
+      <DependentUpon>EditSudentGrades.aspx</DependentUpon>
     </Compile>
     <Compile Include="Teacher\StudentGrades.aspx.cs">
       <DependentUpon>StudentGrades.aspx</DependentUpon>
