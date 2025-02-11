@@ -272,6 +272,7 @@
     <Content Include="Teacher\ViewClass.aspx" />
     <Content Include="Teacher\ViewStudentAttendance.aspx" />
     <Content Include="Teacher\ViewTeacher.aspx" />
+    <Content Include="Teacher\ViewTeacherPhoto.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -521,6 +522,13 @@
     </Compile>
     <Compile Include="Teacher\ViewTeacher.aspx.designer.cs">
       <DependentUpon>ViewTeacher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\ViewTeacherPhoto.aspx.cs">
+      <DependentUpon>ViewTeacherPhoto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\ViewTeacherPhoto.aspx.designer.cs">
+      <DependentUpon>ViewTeacherPhoto.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

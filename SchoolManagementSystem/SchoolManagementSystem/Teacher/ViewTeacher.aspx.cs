@@ -3,6 +3,7 @@ using System.Configuration;
 using System.Data;
 using MySql.Data.MySqlClient;
 using System.Web.UI;
+using System.Web.UI.WebControls;
 
 namespace SchoolManagementSystem.Teacher
 {
@@ -16,7 +17,7 @@ namespace SchoolManagementSystem.Teacher
             }
         }
 
-        // Method to load teachers' names, emails, and genders into the GridView
+        // Method to load teachers' names, emails, genders, and IDs into the GridView
         private void LoadTeachers()
         {
             try
@@ -25,7 +26,7 @@ namespace SchoolManagementSystem.Teacher
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
                 {
                     connection.Open();
-                    string selectQuery = "SELECT Name, Email, IFNULL(Gender, '') AS Gender FROM Teacher";
+                    string selectQuery = "SELECT TeacherID, Name, Email, IFNULL(Gender, '') AS Gender FROM Teacher";
                     MySqlDataAdapter dataAdapter = new MySqlDataAdapter(selectQuery, connection);
                     DataTable teacherTable = new DataTable();
                     dataAdapter.Fill(teacherTable);
@@ -38,6 +39,16 @@ namespace SchoolManagementSystem.Teacher
             {
                 lblStatus.Text = "An error occurred: " + ex.Message;
                 lblStatus.ForeColor = System.Drawing.Color.Red;
+            }
+        }
+
+        // Code-behind for handling button click event
+        protected void gvTeachers_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "ViewPhoto")
+            {
+                int teacherId = Convert.ToInt32(e.CommandArgument);
+                Response.Redirect("ViewTeacherPhoto.aspx?TeacherID=" + teacherId);
             }
         }
     }
