@@ -16,7 +16,7 @@ namespace SchoolManagementSystem.Teacher
             }
         }
 
-        // Method to load all teachers into the GridView
+        // Method to load teachers' names, emails, and genders into the GridView
         private void LoadTeachers()
         {
             try
@@ -25,7 +25,7 @@ namespace SchoolManagementSystem.Teacher
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
                 {
                     connection.Open();
-                    string selectQuery = "SELECT TeacherId, Name, DOB, Gender, Mobile, Email, Address FROM Teacher";
+                    string selectQuery = "SELECT Name, Email, IFNULL(Gender, '') AS Gender FROM Teacher";
                     MySqlDataAdapter dataAdapter = new MySqlDataAdapter(selectQuery, connection);
                     DataTable teacherTable = new DataTable();
                     dataAdapter.Fill(teacherTable);

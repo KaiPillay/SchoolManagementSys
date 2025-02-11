@@ -6,13 +6,9 @@
 
     <asp:GridView ID="gvTeachers" runat="server" AutoGenerateColumns="False" CssClass="table table-striped">
         <Columns>
-            <asp:BoundField DataField="TeacherId" HeaderText="Teacher ID" SortExpression="TeacherId" />
             <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
-            <asp:BoundField DataField="DOB" HeaderText="Date of Birth" SortExpression="DOB" />
-            <asp:BoundField DataField="Gender" HeaderText="Gender" SortExpression="Gender" />
-            <asp:BoundField DataField="Mobile" HeaderText="Mobile" SortExpression="Mobile" />
             <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
-            <asp:BoundField DataField="Address" HeaderText="Address" SortExpression="Address" />
+            <asp:BoundField DataField="Gender" HeaderText="Gender" SortExpression="Gender" />
         </Columns>
     </asp:GridView>
 </asp:Content>
