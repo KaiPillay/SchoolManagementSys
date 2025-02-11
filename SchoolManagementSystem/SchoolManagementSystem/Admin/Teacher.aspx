@@ -43,5 +43,10 @@
         <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" TextMode="Password" required></asp:TextBox>
     </div>
 
+    <div class="form-group">
+        <label>Photo URL</label>
+        <asp:TextBox ID="txtPhotoUrl" runat="server" CssClass="form-control"></asp:TextBox>
+    </div>
+
     <asp:Button ID="btnAdd" runat="server" CssClass="btn btn-primary" Text="Add Teacher" OnClick="btnAdd_Click" />
 </asp:Content>

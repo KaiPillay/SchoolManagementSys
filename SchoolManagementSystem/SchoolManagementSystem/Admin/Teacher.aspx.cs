@@ -1,16 +1,11 @@
 ﻿using System;
 using System.Configuration;
-using System.Data;
-using System.Web.UI;
 using MySql.Data.MySqlClient;
-using static SchoolManagementSystem.Models.CommonFn;
 
 namespace SchoolManagementSystem.Admin
 {
     public partial class Teacher : System.Web.UI.Page
     {
-        Commonfnx fn = new Commonfnx();
-
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -37,8 +32,8 @@ namespace SchoolManagementSystem.Admin
 
                     if (teacherCount == 0)
                     {
-                        string insertQuery = "INSERT INTO Teacher (Name, DOB, Gender, Mobile, Email, Address, Password) " +
-                                             "VALUES (@Name, @DOB, @Gender, @Mobile, @Email, @Address, @Password)";
+                        string insertQuery = "INSERT INTO Teacher (Name, DOB, Gender, Mobile, Email, Address, Password, PhotoUrl) " +
+                                             "VALUES (@Name, @DOB, @Gender, @Mobile, @Email, @Address, @Password, @PhotoUrl)";
                         MySqlCommand insertCmd = new MySqlCommand(insertQuery, connection);
                         insertCmd.Parameters.AddWithValue("@Name", txtName.Text.Trim());
                         insertCmd.Parameters.AddWithValue("@DOB", txtDOB.Text.Trim());
@@ -47,6 +42,7 @@ namespace SchoolManagementSystem.Admin
                         insertCmd.Parameters.AddWithValue("@Email", txtEmail.Text.Trim());
                         insertCmd.Parameters.AddWithValue("@Address", txtAddress.Text.Trim());
                         insertCmd.Parameters.AddWithValue("@Password", txtPassword.Text.Trim());
+                        insertCmd.Parameters.AddWithValue("@PhotoUrl", txtPhotoUrl.Text.Trim());  // Add Photo URL
 
                         insertCmd.ExecuteNonQuery();
                         lblStatus.Text = "Teacher added successfully.";

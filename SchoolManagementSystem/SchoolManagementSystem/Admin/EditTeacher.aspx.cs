@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Configuration;
-using System.Data;
 using MySql.Data.MySqlClient;
-using System.Web.UI;
+using System.Data;
 using System.Web.UI.WebControls;
+
 
 namespace SchoolManagementSystem.Admin
 {
@@ -26,7 +26,7 @@ namespace SchoolManagementSystem.Admin
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
                 {
                     connection.Open();
-                    string selectQuery = "SELECT TeacherId, Name, DOB, Gender, Mobile, Email, Address FROM Teacher";
+                    string selectQuery = "SELECT TeacherId, Name, DOB, Gender, Mobile, Email, Address, PhotoUrl FROM Teacher";
                     MySqlDataAdapter dataAdapter = new MySqlDataAdapter(selectQuery, connection);
                     DataTable teacherTable = new DataTable();
                     dataAdapter.Fill(teacherTable);
@@ -55,15 +55,6 @@ namespace SchoolManagementSystem.Admin
                 // Retrieve teacher details based on TeacherId
                 LoadTeacherDetails(teacherId);
             }
-            else if (e.CommandName == "DeleteTeacher")
-            {
-                int index = Convert.ToInt32(e.CommandArgument);
-                GridViewRow selectedRow = gvTeachers.Rows[index];
-                string teacherId = selectedRow.Cells[0].Text;
-
-                // Delete teacher from database
-                DeleteTeacher(teacherId);
-            }
         }
 
         // Method to load teacher details into the form for editing
@@ -91,6 +82,7 @@ namespace SchoolManagementSystem.Admin
                         txtEmail.Text = reader["Email"].ToString();
                         txtAddress.Text = reader["Address"].ToString();
                         txtPassword.Text = reader["Password"].ToString();
+                        txtPhotoUrl.Text = reader["PhotoUrl"].ToString();  // Load Photo URL
                         hfTeacherId.Value = teacherId;  // Store TeacherId for update
                     }
                     else
@@ -120,7 +112,7 @@ namespace SchoolManagementSystem.Admin
                 {
                     connection.Open();
                     string updateQuery = "UPDATE Teacher SET Name = @Name, DOB = @DOB, Gender = @Gender, Mobile = @Mobile, " +
-                                         "Email = @Email, Address = @Address, Password = @Password WHERE TeacherId = @TeacherId";
+                                         "Email = @Email, Address = @Address, Password = @Password, PhotoUrl = @PhotoUrl WHERE TeacherId = @TeacherId";
 
                     MySqlCommand updateCmd = new MySqlCommand(updateQuery, connection);
                     updateCmd.Parameters.AddWithValue("@Name", txtName.Text.Trim());
@@ -130,6 +122,7 @@ namespace SchoolManagementSystem.Admin
                     updateCmd.Parameters.AddWithValue("@Email", txtEmail.Text.Trim());
                     updateCmd.Parameters.AddWithValue("@Address", txtAddress.Text.Trim());
                     updateCmd.Parameters.AddWithValue("@Password", txtPassword.Text.Trim());
+                    updateCmd.Parameters.AddWithValue("@PhotoUrl", txtPhotoUrl.Text.Trim());  // Update Photo URL
                     updateCmd.Parameters.AddWithValue("@TeacherId", teacherId);
 
                     int rowsAffected = updateCmd.ExecuteNonQuery();
@@ -144,42 +137,6 @@ namespace SchoolManagementSystem.Admin
                     {
                         lblStatus.Text = "No changes were made.";
                         lblStatus.ForeColor = System.Drawing.Color.Orange;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                lblStatus.Text = "An error occurred: " + ex.Message;
-                lblStatus.ForeColor = System.Drawing.Color.Red;
-            }
-        }
-
-        // Method to delete teacher
-        private void DeleteTeacher(string teacherId)
-        {
-            try
-            {
-                string connectionString = ConfigurationManager.ConnectionStrings["SchoolSys"].ConnectionString;
-
-                using (MySqlConnection connection = new MySqlConnection(connectionString))
-                {
-                    connection.Open();
-                    string deleteQuery = "DELETE FROM Teacher WHERE TeacherId = @TeacherId";
-                    MySqlCommand deleteCmd = new MySqlCommand(deleteQuery, connection);
-                    deleteCmd.Parameters.AddWithValue("@TeacherId", teacherId);
-
-                    int rowsAffected = deleteCmd.ExecuteNonQuery();
-
-                    if (rowsAffected > 0)
-                    {
-                        lblStatus.Text = "Teacher deleted successfully.";
-                        lblStatus.ForeColor = System.Drawing.Color.Green;
-                        LoadTeachers();  // Reload the grid after delete
-                    }
-                    else
-                    {
-                        lblStatus.Text = "Error occurred while deleting teacher.";
-                        lblStatus.ForeColor = System.Drawing.Color.Red;
                     }
                 }
             }

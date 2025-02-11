@@ -57,6 +57,11 @@
         <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" required></asp:TextBox>
     </div>
 
+    <div class="form-group">
+        <label>Photo URL</label>
+        <asp:TextBox ID="txtPhotoUrl" runat="server" CssClass="form-control"></asp:TextBox>
+    </div>
+
     <asp:Button ID="btnUpdate" runat="server" Text="Update Teacher" OnClick="btnUpdate_Click" CssClass="btn btn-primary" />
     <asp:HiddenField ID="hfTeacherId" runat="server" />
 </asp:Content>

@@ -87,6 +87,15 @@ namespace SchoolManagementSystem.Admin
         protected global::System.Web.UI.WebControls.TextBox txtPassword;
 
         /// <summary>
+        /// txtPhotoUrl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPhotoUrl;
+
+        /// <summary>
         /// btnAdd control.
         /// </summary>
         /// <remarks>
