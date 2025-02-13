@@ -68,9 +68,18 @@
                                 <div class="arrow"><i class="fas fa-chevron-down"></i></div>
                             </a>
                             <ul class="accordion">
-                                <li><a href="../Student/ViewStudent.aspx" class="active"><i class="fas fa-users pr-1"></i>View Students</a></li>
                                 <li><a href="../Student/StudentGrades.aspx" class="active"><i class="fas fa-graduation-cap pr-1"></i>View Grades</a></li>
                                 <li><a href="../Student/EditStudentProfile.aspx" class="active"><i class="fas fa-edit pr-1"></i>Edit Profile</a></li>
+                            </ul>
+                        </li>
+                                                <li>
+                            <a href="#">
+                                <div class="icon"><i class="fas fa-user-tie"></i></div>
+                                <div class="title">Teachers</div>
+                                <div class="arrow"><i class="fas fa-chevron-down"></i></div>
+                            </a>
+                            <ul class="accordion">
+                                <li><a href="../Teacher/ViewTeacher.aspx" class="active"><i class="fas fa-user-plus pr-1"></i>View Teachers</a></li>
                             </ul>
                         </li>
                         <li>
