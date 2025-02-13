@@ -148,7 +148,10 @@
     <Content Include="Admin\Subject.aspx" />
     <Content Include="Admin\Teacher.aspx" />
     <Content Include="Admin\TeacherSubject.aspx" />
+    <Content Include="Student\StudentAttendance.aspx" />
     <Content Include="Student\StudentHome.aspx" />
+    <Content Include="Student\ViewTeacher.aspx" />
+    <Content Include="Student\ViewTeacherPhoto.aspx" />
     <Content Include="Teacher\AddClassAttendance.aspx" />
     <Content Include="Teacher\AddClassMarks.aspx" />
     <Content Include="Teacher\AddSudentGrades.aspx" />
@@ -388,6 +391,13 @@
     <Compile Include="Admin\TeacherSubject.aspx.designer.cs">
       <DependentUpon>TeacherSubject.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Student\StudentAttendance.aspx.cs">
+      <DependentUpon>StudentAttendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\StudentAttendance.aspx.designer.cs">
+      <DependentUpon>StudentAttendance.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Student\StudentHome.aspx.cs">
       <DependentUpon>StudentHome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -401,6 +411,20 @@
     </Compile>
     <Compile Include="Student\StudentMst.Master.designer.cs">
       <DependentUpon>StudentMst.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Student\ViewTeacher.aspx.cs">
+      <DependentUpon>ViewTeacher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\ViewTeacher.aspx.designer.cs">
+      <DependentUpon>ViewTeacher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\ViewTeacherPhoto.aspx.cs">
+      <DependentUpon>ViewTeacherPhoto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\ViewTeacherPhoto.aspx.designer.cs">
+      <DependentUpon>ViewTeacherPhoto.aspx</DependentUpon>
     </Compile>
     <Compile Include="Teacher\AddClassAttendance.aspx.cs">
       <DependentUpon>AddClassAttendance.aspx</DependentUpon>
