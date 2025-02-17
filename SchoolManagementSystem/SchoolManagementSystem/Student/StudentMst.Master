@@ -69,6 +69,7 @@
                             </a>
                             <ul class="accordion">
                                 <li><a href="../Student/StudentGrades.aspx" class="active"><i class="fas fa-graduation-cap pr-1"></i>View Grades</a></li>
+                                <li><a href="../Student/StudentGradesChart.aspx" class="active"><i class="fas fa-graduation-cap pr-1"></i>View Chart</a></li>
                             </ul>
                         </li>
                         <li>
