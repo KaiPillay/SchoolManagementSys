@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="SchoolSys-Web.config Connection String" description="SchoolSys Connection String used in web.config by the application to access the database." defaultValue="Server=127.0.0.1;Port=3307;Database=schoolsysdb;User=root;Password=P455word;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\kaipi\\Documents\\%TopUp\\SchoolManagementSystem\\SchoolManagementSys\\SchoolManagementSystem\\SchoolManagementSystem\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='SchoolSys']/@connectionString" />
+  </parameter>
+</parameters>
