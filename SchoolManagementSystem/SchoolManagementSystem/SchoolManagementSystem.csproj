@@ -161,8 +161,10 @@
     <Content Include="Teacher\EditSudentGrades.aspx" />
     <Content Include="Teacher\Expenses.aspx" />
     <Content Include="Teacher\StudentGrades.aspx" />
+    <Content Include="Teacher\StudentGradesGraph.aspx" />
     <Content Include="Teacher\Students.aspx" />
     <Content Include="Teacher\StudsentAttendance.aspx" />
+    <Content Include="Teacher\StudsentAttendanceGraph.aspx" />
     <Content Include="Teacher\Subject.aspx" />
     <Content Include="Teacher\TeacherHome.aspx" />
     <Content Include="Admin\UpdateUsers.aspx" />
@@ -494,6 +496,13 @@
     <Compile Include="Teacher\StudentGrades.aspx.designer.cs">
       <DependentUpon>StudentGrades.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Teacher\StudentGradesGraph.aspx.cs">
+      <DependentUpon>StudentGradesGraph.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\StudentGradesGraph.aspx.designer.cs">
+      <DependentUpon>StudentGradesGraph.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Teacher\Students.aspx.cs">
       <DependentUpon>Students.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -507,6 +516,13 @@
     </Compile>
     <Compile Include="Teacher\StudsentAttendance.aspx.designer.cs">
       <DependentUpon>StudsentAttendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\StudsentAttendanceGraph.aspx.cs">
+      <DependentUpon>StudsentAttendanceGraph.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\StudsentAttendanceGraph.aspx.designer.cs">
+      <DependentUpon>StudsentAttendanceGraph.aspx</DependentUpon>
     </Compile>
     <Compile Include="Teacher\Subject.aspx.cs">
       <DependentUpon>Subject.aspx</DependentUpon>
