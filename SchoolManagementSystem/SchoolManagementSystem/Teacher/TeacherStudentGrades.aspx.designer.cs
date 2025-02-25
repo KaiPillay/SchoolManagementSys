@@ -11,8 +11,17 @@ namespace SchoolManagementSystem.Teacher
 {
 
 
-    public partial class StudentGradesGraph
+    public partial class TeacherStudentGrades
     {
+
+        /// <summary>
+        /// ddlStudents control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlStudents;
 
         /// <summary>
         /// lblError control.
@@ -24,12 +33,12 @@ namespace SchoolManagementSystem.Teacher
         protected global::System.Web.UI.WebControls.Label lblError;
 
         /// <summary>
-        /// ddlSubjects control.
+        /// gvExamResults control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlSubjects;
+        protected global::System.Web.UI.WebControls.GridView gvExamResults;
     }
 }

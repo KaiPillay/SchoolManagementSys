@@ -279,6 +279,7 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Teacher\TeacherStudentGrades.aspx" />
     <Content Include="Teacher\ViewClass.aspx" />
     <Content Include="Teacher\ViewStudentAttendance.aspx" />
     <Content Include="Teacher\ViewTeacher.aspx" />
@@ -567,6 +568,13 @@
     </Compile>
     <Compile Include="Teacher\TeacherMst.Master.designer.cs">
       <DependentUpon>TeacherMst.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\TeacherStudentGrades.aspx.cs">
+      <DependentUpon>TeacherStudentGrades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\TeacherStudentGrades.aspx.designer.cs">
+      <DependentUpon>TeacherStudentGrades.aspx</DependentUpon>
     </Compile>
     <Compile Include="Teacher\ViewClass.aspx.cs">
       <DependentUpon>ViewClass.aspx</DependentUpon>
