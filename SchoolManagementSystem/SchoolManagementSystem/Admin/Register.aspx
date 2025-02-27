@@ -70,6 +70,7 @@
                         <asp:ListItem Text="Admin" Value="Admin" />
                         <asp:ListItem Text="Teacher" Value="Teacher" />
                         <asp:ListItem Text="Student" Value="Student" />
+                        <asp:ListItem Text="Parent" Value="Parent" />
                     </asp:DropDownList>
                 </div>
 

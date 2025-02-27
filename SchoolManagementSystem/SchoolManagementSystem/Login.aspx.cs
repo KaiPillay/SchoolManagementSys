@@ -122,6 +122,9 @@ namespace SchoolManagementSystem
                 case "Student":
                     Response.Redirect("~/Student/StudentHome.aspx");
                     break;
+                case "Parent":
+                    Response.Redirect("~/Parents/ParentHome.aspx");
+                    break;
                 default:
                     lblMsg.Text = "Unknown role. Please contact support.";
                     lblMsg.CssClass = "alert alert-danger";
