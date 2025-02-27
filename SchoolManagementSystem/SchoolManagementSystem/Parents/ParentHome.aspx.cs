@@ -29,28 +29,42 @@ namespace SchoolManagementSystem.Parents
         {
             try
             {
-                int userId = Convert.ToInt32(Session["UserID"]);
+                int parentUserId = Convert.ToInt32(Session["UserID"]);
 
-                // Fetch StudentID and Name using UserID
-                string studentQuery = "SELECT StudentID, Name FROM student WHERE UserID = @UserID";
-                DataTable studentData = Fetch(studentQuery, new MySqlParameter("@UserID", userId));
+                // Fetch the StudentUserID linked to this ParentUserID
+                string parentStudentQuery = "SELECT StudentUserID FROM parent_student WHERE ParentUserID = @ParentUserID";
+                DataTable parentStudentData = Fetch(parentStudentQuery, new MySqlParameter("@ParentUserID", parentUserId));
 
-                if (studentData.Rows.Count > 0)
+                if (parentStudentData.Rows.Count > 0)
                 {
-                    int studentId = Convert.ToInt32(studentData.Rows[0]["StudentID"]);
-                    string studentName = studentData.Rows[0]["Name"].ToString();
-                    lblStudentName.Text = studentName;
+                    int studentUserId = Convert.ToInt32(parentStudentData.Rows[0]["StudentUserID"]);
 
-                    // Fetch Attendance Data for the Student
-                    string attendanceQuery = "SELECT Status, Date FROM StudentAttendance WHERE StudentID = @StudentID ORDER BY Date DESC LIMIT 5";
-                    DataTable attendanceData = Fetch(attendanceQuery, new MySqlParameter("@StudentID", studentId));
+                    // Fetch StudentID and Name using StudentUserID
+                    string studentQuery = "SELECT StudentID, Name FROM student WHERE UserID = @StudentUserID";
+                    DataTable studentData = Fetch(studentQuery, new MySqlParameter("@StudentUserID", studentUserId));
 
-                    GridViewAttendance.DataSource = attendanceData;
-                    GridViewAttendance.DataBind();
+                    if (studentData.Rows.Count > 0)
+                    {
+                        int studentId = Convert.ToInt32(studentData.Rows[0]["StudentID"]);
+                        string studentName = studentData.Rows[0]["Name"].ToString();
+                        lblStudentName.Text = studentName;
+
+                        // Fetch Attendance Data for the Student
+                        string attendanceQuery = "SELECT Status, Date FROM StudentAttendance WHERE StudentID = @StudentID ORDER BY Date DESC LIMIT 5";
+                        DataTable attendanceData = Fetch(attendanceQuery, new MySqlParameter("@StudentID", studentId));
+
+                        GridViewAttendance.DataSource = attendanceData;
+                        GridViewAttendance.DataBind();
+                    }
+                    else
+                    {
+                        lblMessage.Text = "Error: Student record not found.";
+                        lblMessage.ForeColor = System.Drawing.Color.Red;
+                    }
                 }
                 else
                 {
-                    lblMessage.Text = "Error: Student record not found.";
+                    lblMessage.Text = "Error: No student linked to this parent.";
                     lblMessage.ForeColor = System.Drawing.Color.Red;
                 }
             }

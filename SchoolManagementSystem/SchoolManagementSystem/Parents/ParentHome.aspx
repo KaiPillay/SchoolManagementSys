@@ -5,12 +5,15 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container mt-4">
-        <h1 class="text-center">Welcome, <asp:Label ID="lblStudentName" runat="server" Text=""></asp:Label>!</h1>
+
+        <h1 class="text-center">Welcome, parent of: <asp:Label ID="lblStudentName" runat="server" Text=""></asp:Label>!</h1>
+
 
         <asp:Label ID="lblMessage" runat="server" CssClass="text-danger"></asp:Label>
         <asp:Label ID="lblStatus" runat="server" CssClass="text-success"></asp:Label>
 
         <div class="mt-3">
+
             <h3>Your Recent Attendance Records</h3>
             <asp:GridView ID="GridViewAttendance" runat="server" AutoGenerateColumns="false" CssClass="table table-bordered" EmptyDataText="No attendance records found">
                 <Columns>
