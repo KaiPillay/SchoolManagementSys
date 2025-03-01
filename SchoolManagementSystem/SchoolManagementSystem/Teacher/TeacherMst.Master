@@ -11,6 +11,8 @@
     <script src="../Scripts/jquery-3.0.0.min.js"></script>
     <script src="../Scripts/popper.min.js"></script>
     <script src="../Scripts/bootstrap.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/signalr/jquery.signalR-2.4.2.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script>
         $(document).ready(function () {
@@ -69,6 +71,9 @@
                             </a>
                             <ul class="accordion">
                                 <li><a href="../Teacher/ViewTeacher.aspx" class="active"><i class="fas fa-user-plus pr-1"></i>View Teachers</a></li>
+                            </ul>
+                            <ul class="accordion">
+                                <li><a href="../Teacher/TeacherChat.aspx" class="active"><i class="fas fa-user-plus pr-1"></i>Chat</a></li>
                             </ul>
                         </li>
                         <li>
