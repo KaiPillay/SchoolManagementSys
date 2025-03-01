@@ -10,9 +10,8 @@ namespace SchoolManagementSystem
     {
         public void Configuration(IAppBuilder app)
         {
-            // Enable SignalR
+            // Configure SignalR
             app.MapSignalR();
         }
     }
 }
-
