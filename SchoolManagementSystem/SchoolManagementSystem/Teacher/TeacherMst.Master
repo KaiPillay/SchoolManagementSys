@@ -72,9 +72,6 @@
                             <ul class="accordion">
                                 <li><a href="../Teacher/ViewTeacher.aspx" class="active"><i class="fas fa-user-plus pr-1"></i>View Teachers</a></li>
                             </ul>
-                            <ul class="accordion">
-                                <li><a href="../Teacher/TeacherChat.aspx" class="active"><i class="fas fa-user-plus pr-1"></i>Chat</a></li>
-                            </ul>
                         </li>
                         <li>
                             <a href="#">
@@ -115,9 +112,9 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="../Teacher/TeacherProfile.aspx">
+                            <a href="../Teacher/TeacherAddAnnouncement.aspx">
                                 <div class="icon"><i class="fas fa-user"></i></div>
-                                <div class="title">Profile</div>
+                                <div class="title">Make Announcement</div>
                             </a>
                         </li>
                     </ul>

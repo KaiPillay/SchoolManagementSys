@@ -260,6 +260,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\AddAnnouncement.aspx" />
     <Content Include="Admin\AddClass.aspx" />
     <Content Include="Admin\AddMarks.aspx" />
     <Content Include="Admin\AdminHome.aspx" />
@@ -295,7 +296,7 @@
     <Content Include="Teacher\Students.aspx" />
     <Content Include="Teacher\StudsentAttendance.aspx" />
     <Content Include="Teacher\Subject.aspx" />
-    <Content Include="Teacher\TeacherChat.aspx" />
+    <Content Include="Teacher\TeacherAddAnnouncement.aspx" />
     <Content Include="Teacher\TeacherHome.aspx" />
     <Content Include="Admin\UpdateUsers.aspx" />
     <Content Include="Admin\ViewStudentAttendance.aspx" />
@@ -417,6 +418,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\AddAnnouncement.aspx.cs">
+      <DependentUpon>AddAnnouncement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddAnnouncement.aspx.designer.cs">
+      <DependentUpon>AddAnnouncement.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\AddClass.aspx.cs">
       <DependentUpon>AddClass.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -671,12 +679,12 @@
     <Compile Include="Teacher\Subject.aspx.designer.cs">
       <DependentUpon>Subject.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Teacher\TeacherChat.aspx.cs">
-      <DependentUpon>TeacherChat.aspx</DependentUpon>
+    <Compile Include="Teacher\TeacherAddAnnouncement.aspx.cs">
+      <DependentUpon>TeacherAddAnnouncement.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Teacher\TeacherChat.aspx.designer.cs">
-      <DependentUpon>TeacherChat.aspx</DependentUpon>
+    <Compile Include="Teacher\TeacherAddAnnouncement.aspx.designer.cs">
+      <DependentUpon>TeacherAddAnnouncement.aspx</DependentUpon>
     </Compile>
     <Compile Include="Teacher\TeacherHome.aspx.cs">
       <DependentUpon>TeacherHome.aspx</DependentUpon>

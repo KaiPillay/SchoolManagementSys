@@ -126,6 +126,7 @@
                             <ul class="accordion">
                                 <li><a href="../Admin/Register.aspx" class="active"><i class="fas fa-notes-medical pr-1"></i>Add Users</a></li>
                                 <li><a href="../Admin/UpdateUsers.aspx" class="active"><i class="fas fa-notes-medical pr-1"></i>Update Users</a></li>
+                                <li><a href="../Admin/AddAnnouncement.aspx" class="active"><i class="fas fa-notes-medical pr-1"></i>Announce To Users</a></li>
                             </ul>
                         </li>
                     </ul>
