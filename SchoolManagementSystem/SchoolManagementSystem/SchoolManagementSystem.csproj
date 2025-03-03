@@ -281,6 +281,7 @@
     <Content Include="Admin\Subject.aspx" />
     <Content Include="Admin\Teacher.aspx" />
     <Content Include="Admin\TeacherSubject.aspx" />
+    <Content Include="Admin\UpdateTimetable.aspx" />
     <Content Include="Parents\ParentHome.aspx" />
     <Content Include="Scripts\jquery.signalR-2.4.3.js" />
     <Content Include="Scripts\jquery.signalR-2.4.3.min.js" />
@@ -289,6 +290,7 @@
     <Content Include="Student\StudentGrades.aspx" />
     <Content Include="Student\StudentGradesChart.aspx" />
     <Content Include="Student\StudentHome.aspx" />
+    <Content Include="Student\StudentTimetable.aspx" />
     <Content Include="Student\StudentViewAnnouncements.aspx" />
     <Content Include="Student\ViewTeacher.aspx" />
     <Content Include="Student\ViewTeacherPhoto.aspx" />
@@ -302,6 +304,7 @@
     <Content Include="Teacher\StudsentAttendance.aspx" />
     <Content Include="Teacher\Subject.aspx" />
     <Content Include="Teacher\TeacherAddAnnouncement.aspx" />
+    <Content Include="Teacher\TeacherGradesChart.aspx" />
     <Content Include="Teacher\TeacherHome.aspx" />
     <Content Include="Admin\UpdateUsers.aspx" />
     <Content Include="Admin\ViewStudentAttendance.aspx" />
@@ -557,6 +560,13 @@
     <Compile Include="Admin\TeacherSubject.aspx.designer.cs">
       <DependentUpon>TeacherSubject.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\UpdateTimetable.aspx.cs">
+      <DependentUpon>UpdateTimetable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UpdateTimetable.aspx.designer.cs">
+      <DependentUpon>UpdateTimetable.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ChatHub.cs" />
     <Compile Include="Parents\ParentHome.aspx.cs">
       <DependentUpon>ParentHome.aspx</DependentUpon>
@@ -614,6 +624,13 @@
     </Compile>
     <Compile Include="Student\StudentMst.Master.designer.cs">
       <DependentUpon>StudentMst.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Student\StudentTimetable.aspx.cs">
+      <DependentUpon>StudentTimetable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\StudentTimetable.aspx.designer.cs">
+      <DependentUpon>StudentTimetable.aspx</DependentUpon>
     </Compile>
     <Compile Include="Student\StudentViewAnnouncements.aspx.cs">
       <DependentUpon>StudentViewAnnouncements.aspx</DependentUpon>
@@ -705,6 +722,13 @@
     </Compile>
     <Compile Include="Teacher\TeacherAddAnnouncement.aspx.designer.cs">
       <DependentUpon>TeacherAddAnnouncement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\TeacherGradesChart.aspx.cs">
+      <DependentUpon>TeacherGradesChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\TeacherGradesChart.aspx.designer.cs">
+      <DependentUpon>TeacherGradesChart.aspx</DependentUpon>
     </Compile>
     <Compile Include="Teacher\TeacherHome.aspx.cs">
       <DependentUpon>TeacherHome.aspx</DependentUpon>

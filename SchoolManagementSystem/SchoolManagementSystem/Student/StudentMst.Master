@@ -91,13 +91,14 @@
                             <ul class="accordion">
                                 <li><a href="../Student/StudentAttendance.aspx" class="active"><i class="fas fa-user-plus pr-1"></i>View Attendance</a></li>
                                 <li><a href="../Student/StudentAttendanceGraph.aspx" class="active"><i class="fas fa-user-plus pr-1"></i>View Graph</a></li>
+                                <li><a href="../Student/StudentTimetable.aspx" class="active"><i class="fas fa-user-plus pr-1"></i>Timetable</a></li>
                             </ul>
                         </li>
 
                         <li>
                             <a href="../Student/StudentViewAnnouncements.aspx">
                                 <div class="icon"><i class="fas fa-user"></i></div>
-                                <div class="title">Announcement</div>
+                                <div class="title">Announcements</div>
                             </a>
                         </li>
 
