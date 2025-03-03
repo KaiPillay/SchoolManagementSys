@@ -211,7 +211,6 @@ C:\Users\kaipi\Documents\%TopUp\SchoolManagementSystem\SchoolManagementSys\Schoo
 C:\Users\kaipi\Documents\%TopUp\SchoolManagementSystem\SchoolManagementSys\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Cors.dll
 C:\Users\kaipi\Documents\%TopUp\SchoolManagementSystem\SchoolManagementSys\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Cors.dll
 C:\Users\kaipi\Documents\%TopUp\SchoolManagementSystem\SchoolManagementSys\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Cors.xml
-C:\Users\kaipi\Documents\%TopUp\SchoolManagementSystem\SchoolManagementSys\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.csproj.AssemblyReference.cache
 C:\Users\kaipi\Documents\%TopUp\SchoolManagementSystem\SchoolManagementSys\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.SignalR.Owin.dll
 C:\Users\kaipi\Documents\%TopUp\SchoolManagementSystem\SchoolManagementSys\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.SignalR.Owin.xml
 C:\Users\kaipi\Documents\%TopUp\SchoolManagementSystem\SchoolManagementSys\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNetCore.Authentication.Abstractions.dll
@@ -278,3 +277,6 @@ C:\Users\kaipi\Documents\%TopUp\SchoolManagementSystem\SchoolManagementSys\Schoo
 C:\Users\kaipi\Documents\%TopUp\SchoolManagementSystem\SchoolManagementSys\SchoolManagementSystem\SchoolManagementSystem\bin\System.Text.Encodings.Web.xml
 C:\Users\kaipi\Documents\%TopUp\SchoolManagementSystem\SchoolManagementSys\SchoolManagementSystem\SchoolManagementSystem\bin\System.Threading.Channels.xml
 C:\Users\kaipi\Documents\%TopUp\SchoolManagementSystem\SchoolManagementSys\SchoolManagementSystem\SchoolManagementSystem\bin\System.ValueTuple.xml
+C:\Users\kaipi\Documents\%TopUp\SchoolManagementSystem\SchoolManagementSys\SchoolManagementSystem\SchoolManagementSystem\bin\itextsharp.dll
+C:\Users\kaipi\Documents\%TopUp\SchoolManagementSystem\SchoolManagementSys\SchoolManagementSystem\SchoolManagementSystem\bin\itextsharp.xml
+C:\Users\kaipi\Documents\%TopUp\SchoolManagementSystem\SchoolManagementSys\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.csproj.AssemblyReference.cache

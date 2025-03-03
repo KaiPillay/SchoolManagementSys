@@ -42,6 +42,7 @@ namespace SchoolManagementSystem.Student
                 lblStudentName.Text = studentData.Rows[0]["Name"].ToString();
             }
         }
+
         public string GetAttendanceData()
         {
             int userId = Convert.ToInt32(Session["UserID"]);
@@ -52,13 +53,13 @@ namespace SchoolManagementSystem.Student
             {
                 int studentId = Convert.ToInt32(studentData.Rows[0]["StudentID"]);
                 string attendanceQuery = @"
-            SELECT Date, 
-                   SUM(CASE WHEN Status = 1 THEN 1 ELSE 0 END) AS Present, 
-                   SUM(CASE WHEN Status = 0 THEN 1 ELSE 0 END) AS Absent,
-                   SUM(CASE WHEN Status = 2 THEN 1 ELSE 0 END) AS Late
-            FROM StudentAttendance 
-            WHERE StudentID = @StudentID 
-            GROUP BY Date";
+                    SELECT Date, 
+                           SUM(CASE WHEN Status = 1 THEN 1 ELSE 0 END) AS Present, 
+                           SUM(CASE WHEN Status = 0 THEN 1 ELSE 0 END) AS Absent,
+                           SUM(CASE WHEN Status = 2 THEN 1 ELSE 0 END) AS Late
+                    FROM StudentAttendance 
+                    WHERE StudentID = @StudentID 
+                    GROUP BY Date";
 
                 DataTable attendanceData = Fetch(attendanceQuery, new MySqlParameter("@StudentID", studentId));
 
@@ -67,7 +68,6 @@ namespace SchoolManagementSystem.Student
             }
             return "[]";
         }
-
 
         private DataTable Fetch(string query, MySqlParameter parameter)
         {

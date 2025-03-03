@@ -139,7 +139,7 @@ namespace SchoolManagementSystem.Student
                 }
             }
         }
-
+       
         private DataTable Fetch(string query, MySqlParameter parameter)
         {
             DataTable dt = new DataTable();
