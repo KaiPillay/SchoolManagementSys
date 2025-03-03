@@ -79,7 +79,7 @@
                                 <div class="arrow"><i class="fas fa-chevron-down"></i></div>
                             </a>
                             <ul class="accordion">
-                                <li><a href="../Student/ViewTeacher.aspx" class="active"><i class="fas fa-user-plus pr-1"></i>View Teachers</a></li>
+                                <li><a href="../Parents/ViewTeacher.aspx" class="active"><i class="fas fa-user-plus pr-1"></i>View Teachers</a></li>
                             </ul>
                         </li>
                         <li>

@@ -273,6 +273,7 @@
     <Content Include="Admin\EditStudent.aspx" />
     <Content Include="Admin\EditTeacher.aspx" />
     <Content Include="Admin\Expense.aspx" />
+    <Content Include="Admin\LinkParentStudent.aspx" />
     <Content Include="Admin\Marks.aspx" />
     <Content Include="Admin\Register.aspx" />
     <Content Include="Admin\RegisterParent.aspx" />
@@ -283,6 +284,8 @@
     <Content Include="Admin\TeacherSubject.aspx" />
     <Content Include="Admin\UpdateTimetable.aspx" />
     <Content Include="Parents\ParentHome.aspx" />
+    <Content Include="Parents\ViewTeacher.aspx" />
+    <Content Include="Parents\ViewTeacherPhoto2.aspx" />
     <Content Include="Scripts\jquery.signalR-2.4.3.js" />
     <Content Include="Scripts\jquery.signalR-2.4.3.min.js" />
     <Content Include="Student\StudentAttendance.aspx" />
@@ -504,6 +507,13 @@
     <Compile Include="Admin\Expense.aspx.designer.cs">
       <DependentUpon>Expense.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\LinkParentStudent.aspx.cs">
+      <DependentUpon>LinkParentStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\LinkParentStudent.aspx.designer.cs">
+      <DependentUpon>LinkParentStudent.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Marks.aspx.cs">
       <DependentUpon>Marks.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -581,6 +591,20 @@
     </Compile>
     <Compile Include="Parents\ParentMst.Master.designer.cs">
       <DependentUpon>ParentMst.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Parents\ViewTeacher.aspx.cs">
+      <DependentUpon>ViewTeacher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Parents\ViewTeacher.aspx.designer.cs">
+      <DependentUpon>ViewTeacher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Parents\ViewTeacherPhoto2.aspx.cs">
+      <DependentUpon>ViewTeacherPhoto2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Parents\ViewTeacherPhoto2.aspx.designer.cs">
+      <DependentUpon>ViewTeacherPhoto2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
     <Compile Include="Student\StudentAttendance.aspx.cs">

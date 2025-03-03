@@ -28,6 +28,7 @@
                     <label for="ddlStatus">Status</label>
                     <asp:DropDownList ID="ddlStatus" runat="server" CssClass="form-control" required>
                         <asp:ListItem Text="Select Status" Value="" />
+                        <asp:ListItem Text="Late" Value="2" />
                         <asp:ListItem Text="Present" Value="1" />
                         <asp:ListItem Text="Absent" Value="0" />
                     </asp:DropDownList>

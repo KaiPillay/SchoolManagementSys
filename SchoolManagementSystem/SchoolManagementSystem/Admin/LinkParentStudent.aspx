@@ -1,17 +1,17 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UpdateUsers.aspx.cs" Inherits="SchoolManagementSystem.Admin.UpdateUsers" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LinkParentStudent.aspx.cs" Inherits="SchoolManagementSystem.Admin.LinkParentStudent" %>
 
 <!DOCTYPE html>
 <html lang="en">
 <head runat="server">
     <meta charset="utf-8" />
-    <title>Update User</title>
+    <title>Link Parent to Student</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     <style>
         body {
             background-color: #f4f4f9;
         }
         .container {
-            max-width: 500px;
+            max-width: 800px;
         }
         .card {
             margin-top: 50px;
@@ -43,33 +43,31 @@
     <form id="form1" runat="server">
         <div class="container">
             <div class="card">
-                <h2 class="text-center text-purple">Update User</h2>
+                <h2 class="text-center text-purple">Link Parent to Student</h2>
                 <hr />
                 <asp:Label ID="lblMsg" runat="server" CssClass="alert" Visible="false"></asp:Label>
                 <div class="form-group">
-                    <label for="txtUsername">Username</label>
-                    <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control" placeholder="Enter username" required></asp:TextBox>
+                    <label for="ddlParent">Select Parent</label>
+                    <asp:DropDownList ID="ddlParent" runat="server" CssClass="form-control"></asp:DropDownList>
                 </div>
                 <div class="form-group">
-                    <label for="ddlRole">Role</label>
-                    <asp:DropDownList ID="ddlRole" runat="server" CssClass="form-control">
-                        <asp:ListItem Text="Select Role" Value="" />
-                        <asp:ListItem Text="Admin" Value="Admin" />
-                        <asp:ListItem Text="Teacher" Value="Teacher" />
-                        <asp:ListItem Text="Student" Value="Student" />
-                    </asp:DropDownList>
-                </div>
-                <div class="form-group">
-                    <label for="txtNewPassword">New Password</label>
-                    <asp:TextBox ID="txtNewPassword" runat="server" CssClass="form-control" TextMode="Password" placeholder="Enter new password"></asp:TextBox>
+                    <label for="ddlStudent">Select Student</label>
+                    <asp:DropDownList ID="ddlStudent" runat="server" CssClass="form-control"></asp:DropDownList>
                 </div>
                 <div class="form-group text-center">
-                    <asp:Button ID="btnUpdate" runat="server" CssClass="btn btn-purple btn-block" Text="Update" OnClick="btnUpdate_Click" />
-                    <asp:Button ID="btnDelete" runat="server" CssClass="btn btn-danger btn-block" Text="Delete" OnClick="btnDelete_Click" CausesValidation="false" />
+                    <asp:Button ID="btnLink" runat="server" CssClass="btn btn-purple btn-block" Text="Link Parent to Student" OnClick="btnLink_Click" />
                 </div>
                 <div class="form-group text-center">
                     <asp:Button ID="btnBack" runat="server" CssClass="btn btn-back btn-block" Text="Back to Admin Home" OnClick="btnBack_Click" CausesValidation="false" />
                 </div>
+                <hr />
+                <h4 class="text-center">Linked Parent-Student Data</h4>
+                <asp:GridView ID="GridView1" runat="server" CssClass="table table-bordered" AutoGenerateColumns="false">
+                    <Columns>
+                        <asp:BoundField DataField="ParentName" HeaderText="Parent Name" />
+                        <asp:BoundField DataField="StudentName" HeaderText="Student Name" />
+                    </Columns>
+                </asp:GridView>
             </div>
         </div>
 

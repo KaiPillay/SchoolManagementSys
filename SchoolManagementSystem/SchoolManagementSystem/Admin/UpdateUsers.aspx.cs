@@ -68,6 +68,21 @@ namespace SchoolManagementSystem.Admin
             try
             {
                 fn.ExecuteParameterizedQuery(query, parameters);
+
+                // Update password if provided
+                if (!string.IsNullOrEmpty(txtNewPassword.Text))
+                {
+                    string hashedPassword = BCrypt.Net.BCrypt.HashPassword(txtNewPassword.Text);
+                    string updatePasswordQuery = "UPDATE users SET passwordHash = @PasswordHash WHERE userId = @UserId";
+                    MySqlParameter[] passwordParameters = new MySqlParameter[]
+                    {
+                        new MySqlParameter("@PasswordHash", MySqlDbType.VarChar) { Value = hashedPassword },
+                        new MySqlParameter("@UserId", MySqlDbType.Int32) { Value = userId }
+                    };
+
+                    fn.ExecuteParameterizedQuery(updatePasswordQuery, passwordParameters);
+                }
+
                 lblMsg.Text = "User updated successfully!";
                 lblMsg.CssClass = "alert alert-success";
                 lblMsg.Visible = true;
