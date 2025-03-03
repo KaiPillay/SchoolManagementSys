@@ -264,6 +264,7 @@
     <Content Include="Admin\AddClass.aspx" />
     <Content Include="Admin\AddMarks.aspx" />
     <Content Include="Admin\AdminHome.aspx" />
+    <Content Include="Admin\AdminViewAnnouncements.aspx" />
     <Content Include="Admin\ClassFees.aspx" />
     <Content Include="Admin\EditMarks.aspx" />
     <Content Include="Admin\EditStudent.aspx" />
@@ -285,6 +286,7 @@
     <Content Include="Student\StudentGrades.aspx" />
     <Content Include="Student\StudentGradesChart.aspx" />
     <Content Include="Student\StudentHome.aspx" />
+    <Content Include="Student\StudentViewAnnouncements.aspx" />
     <Content Include="Student\ViewTeacher.aspx" />
     <Content Include="Student\ViewTeacherPhoto.aspx" />
     <Content Include="Teacher\AddClassAttendance.aspx" />
@@ -411,6 +413,7 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Teacher\TeacherViewAnnouncements.aspx" />
     <Content Include="Teacher\ViewClass.aspx" />
     <Content Include="Teacher\ViewStudentAttendance.aspx" />
     <Content Include="Teacher\ViewTeacher.aspx" />
@@ -452,6 +455,13 @@
     </Compile>
     <Compile Include="Admin\AdminMst.Master.designer.cs">
       <DependentUpon>AdminMst.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminViewAnnouncements.aspx.cs">
+      <DependentUpon>AdminViewAnnouncements.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminViewAnnouncements.aspx.designer.cs">
+      <DependentUpon>AdminViewAnnouncements.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\ClassFees.aspx.cs">
       <DependentUpon>ClassFees.aspx</DependentUpon>
@@ -602,6 +612,13 @@
     <Compile Include="Student\StudentMst.Master.designer.cs">
       <DependentUpon>StudentMst.Master</DependentUpon>
     </Compile>
+    <Compile Include="Student\StudentViewAnnouncements.aspx.cs">
+      <DependentUpon>StudentViewAnnouncements.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\StudentViewAnnouncements.aspx.designer.cs">
+      <DependentUpon>StudentViewAnnouncements.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Student\ViewTeacher.aspx.cs">
       <DependentUpon>ViewTeacher.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -722,6 +739,13 @@
     </Compile>
     <Compile Include="Teacher\TeacherMst.Master.designer.cs">
       <DependentUpon>TeacherMst.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\TeacherViewAnnouncements.aspx.cs">
+      <DependentUpon>TeacherViewAnnouncements.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\TeacherViewAnnouncements.aspx.designer.cs">
+      <DependentUpon>TeacherViewAnnouncements.aspx</DependentUpon>
     </Compile>
     <Compile Include="Teacher\ViewClass.aspx.cs">
       <DependentUpon>ViewClass.aspx</DependentUpon>

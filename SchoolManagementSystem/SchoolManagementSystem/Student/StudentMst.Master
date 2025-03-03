@@ -93,6 +93,14 @@
                                 <li><a href="../Student/StudentAttendanceGraph.aspx" class="active"><i class="fas fa-user-plus pr-1"></i>View Graph</a></li>
                             </ul>
                         </li>
+
+                        <li>
+                            <a href="../Student/StudentViewAnnouncements.aspx">
+                                <div class="icon"><i class="fas fa-user"></i></div>
+                                <div class="title">Announcement</div>
+                            </a>
+                        </li>
+
                     </ul>
                     <div class="logout_btn">
                         <asp:LinkButton ID="btnLogOut" runat="server" CausesValidation="false" OnClick="btnLogOut_Click">Logout</asp:LinkButton>
