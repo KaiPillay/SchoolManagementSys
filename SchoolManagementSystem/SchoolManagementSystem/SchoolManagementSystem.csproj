@@ -283,6 +283,8 @@
     <Content Include="Admin\Teacher.aspx" />
     <Content Include="Admin\TeacherSubject.aspx" />
     <Content Include="Admin\UpdateTimetable.aspx" />
+    <Content Include="Parents\ParentAttendance.aspx" />
+    <Content Include="Parents\ParentGrades.aspx" />
     <Content Include="Parents\ParentHome.aspx" />
     <Content Include="Parents\ViewTeacher.aspx" />
     <Content Include="Parents\ViewTeacherPhoto2.aspx" />
@@ -578,6 +580,20 @@
       <DependentUpon>UpdateTimetable.aspx</DependentUpon>
     </Compile>
     <Compile Include="ChatHub.cs" />
+    <Compile Include="Parents\ParentAttendance.aspx.cs">
+      <DependentUpon>ParentAttendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Parents\ParentAttendance.aspx.designer.cs">
+      <DependentUpon>ParentAttendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Parents\ParentGrades.aspx.cs">
+      <DependentUpon>ParentGrades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Parents\ParentGrades.aspx.designer.cs">
+      <DependentUpon>ParentGrades.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Parents\ParentHome.aspx.cs">
       <DependentUpon>ParentHome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

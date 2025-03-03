@@ -68,8 +68,7 @@
                                 <div class="arrow"><i class="fas fa-chevron-down"></i></div>
                             </a>
                             <ul class="accordion">
-                                <li><a href="../Parents/StudentGrades.aspx" class="active"><i class="fas fa-graduation-cap pr-1"></i>View Grades</a></li>
-                                <li><a href="../Parents/StudentGradesChart.aspx" class="active"><i class="fas fa-graduation-cap pr-1"></i>View Chart</a></li>
+                                <li><a href="../Parents/ParentGrades.aspx" class="active"><i class="fas fa-graduation-cap pr-1"></i>View Grades</a></li>
                             </ul>
                         </li>
                         <li>
@@ -89,8 +88,7 @@
                                 <div class="arrow"><i class="fas fa-chevron-down"></i></div>
                             </a>
                             <ul class="accordion">
-                                <li><a href="../Parents/StudentAttendance.aspx" class="active"><i class="fas fa-user-plus pr-1"></i>View Attendance</a></li>
-                                <li><a href="../Parents/StudentAttendanceGraph.aspx" class="active"><i class="fas fa-user-plus pr-1"></i>View Graph</a></li>
+                                <li><a href="../Parents/ParentAttendance.aspx" class="active"><i class="fas fa-user-plus pr-1"></i>View Attendance</a></li>
                             </ul>
                         </li>
                     </ul>
